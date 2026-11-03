@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" role="img" aria-label="PHOTO · BTS 1 · 4:5">
+  <!-- Placeholder Pinned Media. Remplacez ce fichier par la photo approuvée (mêmes proportions : 4:5). -->
+  <defs>
+    <pattern id="d" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="24" stroke="#0F4A4C" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="800" fill="#0A3B3D"/>
+  <rect width="640" height="800" fill="url(#d)"/>
+  <rect x="175" y="375" width="289" height="50" rx="25" fill="#062A2B"/>
+  <text x="320" y="400" fill="#FFFFFF" font-family="Manrope, 'Segoe UI', Arial, sans-serif" font-size="21" font-weight="600" letter-spacing="1" text-anchor="middle" dominant-baseline="central">PHOTO · BTS 1 · 4:5</text>
+</svg>

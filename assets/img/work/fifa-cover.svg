@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="720" viewBox="0 0 1680 720" role="img" aria-label="PHOTO · Film still / trailer poster · 21:9">
+  <!-- Placeholder Pinned Media. Remplacez ce fichier par la photo approuvée (mêmes proportions : 21:9). -->
+  <defs>
+    <pattern id="d" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="24" stroke="#D9CFBD" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1680" height="720" fill="#ECE5D8"/>
+  <rect width="1680" height="720" fill="url(#d)"/>
+  <rect x="504" y="331" width="673" height="58" rx="29" fill="#F8F5EF"/>
+  <text x="840" y="360" fill="#14201F" font-family="Manrope, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="1" text-anchor="middle" dominant-baseline="central">PHOTO · Film still / trailer poster · 21:9</text>
+</svg>

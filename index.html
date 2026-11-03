@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Active la classe .js avant le premier rendu (amélioration progressive).
+       Polices : préchargées en ligne ; en local (file://), Chrome bloque les .woff2,
+       on charge donc une copie intégrée (assets/css/fonts-local-file.css). -->
+  <script>
+    (function (d) {
+      d.documentElement.classList.replace("no-js", "js");
+      var local = location.protocol === "file:";
+      var fonts = ["assets/fonts/cinzel-variable.woff2", "assets/fonts/manrope-variable.woff2"];
+      fonts.forEach(function (href) {
+        if (local) return;
+        var l = d.createElement("link");
+        l.rel = "preload"; l.as = "font"; l.type = "font/woff2"; l.href = href; l.crossOrigin = "anonymous";
+        d.head.appendChild(l);
+      });
+    })(document);
+  </script>
+
+  <title data-i18n="meta.title">Pinned Media | Production and Communications</title>
+  <meta name="description" data-i18n-content="meta.description" content="Films, photography, storytelling and communications services in French and English, with local creatives across Africa and the diaspora.">
+  <meta name="theme-color" content="#062A2B">
+
+  <!-- Open Graph / Twitter. TODO : remplacer les chemins relatifs par l'URL absolue du site une fois en ligne -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pinned Media">
+  <meta property="og:title" content="Pinned Media | Production and Communications">
+  <meta property="og:description" content="Films, photography, storytelling and communications services in French and English, with local creatives across Africa and the diaspora.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pinned Media | Production and Communications">
+  <meta name="twitter:description" content="Films, photography, storytelling and communications services in French and English, with local creatives across Africa and the diaspora.">
+  <meta name="twitter:image" content="assets/img/og-image.jpg">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://i.ytimg.com">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Ouverture locale (file://) uniquement : polices intégrées, placées après variables.css pour prendre le relais -->
+  <script>if (location.protocol === "file:") document.write('<link rel="stylesheet" href="assets/css/fonts-local-file.css">');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pinned Media",
+    "email": "info@pinned-media.com",
+    "description": "An international production and communications agency delivering culturally informed films, photography and interactive storytelling, from strategy to final delivery."
+  }
+  </script>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main" data-i18n="ui.skip">Skip to content</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <!-- TODO : remplacer le wordmark par le logo approuvé -->
+      <a class="wordmark" href="#top">Pinned Media</a>
+
+      <div class="site-header__actions">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria-label="ui.language">
+          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="true" lang="en">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+        </div>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-overlay">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+          <span class="sr-only" data-i18n="ui.openMenu">Open menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MENU (overlay plein écran) ===== -->
+  <dialog class="menu-overlay" id="menu-overlay" aria-label="Menu" data-i18n-aria-label="ui.menu">
+    <div class="container menu-overlay__inner">
+      <div class="menu-overlay__top">
+        <span class="wordmark wordmark--static" aria-hidden="true">Pinned Media</span>
+        <button type="button" class="menu-close icon-btn icon-btn--light" data-menu-close>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          <span class="sr-only" data-i18n="ui.closeMenu">Close menu</span>
+        </button>
+      </div>
+      <nav aria-label="Main" data-i18n-aria-label="ui.mainNav">
+        <ol class="menu-list">
+          <li><a href="#what-we-do"><span class="menu-list__num">01</span><span data-i18n="nav.whatWeDo">What we do</span></a></li>
+          <li><a href="#work"><span class="menu-list__num">02</span><span data-i18n="nav.work">Selected work</span></a></li>
+          <li><a href="#training"><span class="menu-list__num">03</span><span data-i18n="nav.training">Training</span></a></li>
+          <li><a href="#clients"><span class="menu-list__num">04</span><span data-i18n="nav.clients">Clients</span></a></li>
+          <li><a href="#how-we-work"><span class="menu-list__num">05</span><span data-i18n="nav.howWeWork">How we work</span></a></li>
+          <li><a href="#team"><span class="menu-list__num">06</span><span data-i18n="nav.team">Team</span></a></li>
+          <li><a href="#contact"><span class="menu-list__num">07</span><span data-i18n="nav.contact">Contact</span></a></li>
+        </ol>
+      </nav>
+      <div class="menu-overlay__bottom">
+        <a class="link-underline" href="mailto:info@pinned-media.com">info@pinned-media.com</a>
+        <div class="lang-switch lang-switch--dark" role="group" aria-label="Language" data-i18n-aria-label="ui.language">
+          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="true" lang="en">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <!-- Fond : miniature YouTube de la vidéo d'en-tête, en attendant un still approuvé.
+             Pour un still local : remplacez src par assets/img/hero/hero-still.jpg -->
+        <img class="hero__bg" src="https://i.ytimg.com/vi/iNHBkITcBS0/maxresdefault.jpg" data-yt-poster="iNHBkITcBS0" data-fallback="assets/img/hero/hero-still.svg" alt="" width="1280" height="720" fetchpriority="high">
+        <!-- OPTION boucle vidéo muette : décommentez le bloc ci-dessous et déposez assets/video/hero-loop.mp4.
+             Le bouton pause (plus bas, .hero__pause) s'affiche automatiquement.
+        <video class="hero__video" src="assets/video/hero-loop.mp4" poster="https://i.ytimg.com/vi/iNHBkITcBS0/maxresdefault.jpg" autoplay muted loop playsinline></video>
+        -->
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow eyebrow--on-dark" data-i18n="hero.eyebrow">Films · Photography · Interactive storytelling</p>
+          <h1 class="hero__title" id="hero-title" data-i18n="hero.title">Stories with impact</h1>
+          <p class="hero__text" data-i18n="hero.text">An international production and communications agency delivering culturally informed films, photography and interactive storytelling, from strategy to final delivery.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="#contact"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.getInTouch">Get in touch</span></a>
+            <a class="btn btn--secondary btn--on-dark" href="#work"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.exploreWork">Explore our work</span></a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-labelledby="hero-card-title">
+          <h2 class="hero-card__title" id="hero-card-title" data-i18n="ui.enquiries">Enquiries</h2>
+          <a class="hero-card__mail link-underline" href="mailto:info@pinned-media.com">info@pinned-media.com</a>
+          <ul class="chip-list" aria-label="Languages" data-i18n-aria-label="ui.languages">
+            <li class="chip chip--glass">English</li>
+            <li class="chip chip--glass" lang="fr">Français</li>
+          </ul>
+          <button type="button" class="hero-card__thumb" data-video-dialog="iNHBkITcBS0" data-video-title-key="ui.headerVideo">
+            <img src="https://i.ytimg.com/vi/iNHBkITcBS0/hqdefault.jpg" data-yt-poster="iNHBkITcBS0" data-yt-step="hq" alt="" width="480" height="360" loading="lazy">
+            <span class="play-dot play-dot--sm" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span>
+            <span class="hero-card__thumb-label" data-i18n="ui.playVideo">Play video</span>
+          </button>
+        </aside>
+      </div>
+
+      <button type="button" class="hero__pause icon-btn icon-btn--light" hidden>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="14" y="3" width="5" height="18" rx="1"/><rect x="5" y="3" width="5" height="18" rx="1"/></svg>
+        <span class="sr-only" data-i18n="ui.pauseVideo">Pause background video</span>
+      </button>
+    </section>
+
+    <!-- ===== INTRODUCTION ===== -->
+    <section class="section about bg-cream" id="about" aria-label="Introduction" data-i18n-aria-label="about.label">
+      <div class="container">
+        <p class="statement reveal" data-i18n="about.statement">Pinned Media tells real stories with real people. Rooted in journalism, we create unscripted cinematic documentaries, photography and interactive storytelling that centre underrepresented communities, Africa and its diaspora.</p>
+        <div class="about__grid">
+          <p class="about__text reveal" data-i18n="about.text">We connect local creatives across Africa and the diaspora to support organisations, brands and publishers with powerful stories and effective communications. Working in French and English, we bring cultural insight, international experience and local knowledge to projects in across the continent.</p>
+          <figure class="media-figure reveal">
+            <img class="media-img" src="assets/img/about/bts-about.svg" alt="Behind the scenes on a Pinned Media shoot" data-i18n-alt="about.imgAlt" width="1200" height="900" loading="lazy">
+            <figcaption class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHAT WE DO ===== -->
+    <section class="section services bg-cream" id="what-we-do" aria-labelledby="services-title">
+      <div class="container services__grid">
+        <div class="services__aside">
+          <div class="services__intro-card">
+            <img class="services__intro-img" src="assets/img/services/what-we-do-cover.svg" alt="" width="960" height="1200" loading="lazy">
+            <div class="services__intro-content">
+              <p class="eyebrow eyebrow--on-dark">01</p>
+              <h2 class="services__title" id="services-title" data-i18n="services.title">What we do</h2>
+              <p class="services__intro" data-i18n="services.intro">We bring communications strategy, content production and management together to help organisations connect with their audiences.</p>
+              <div class="progress" aria-hidden="true"><span class="progress__bar" data-services-progress></span></div>
+            </div>
+          </div>
+        </div>
+
+        <ol class="services__stack" data-services-stack>
+          <li class="service-card service-card--white">
+            <span class="service-card__num">01</span>
+            <div class="service-card__body">
+              <h3 class="service-card__title" data-i18n="services.films.title">Unscripted films and documentaries</h3>
+              <p data-i18n="services.films.text">Cinematic documentaries, interviews and brand films rooted in real lives, from research and filming to editing, sound, subtitles and motion graphics.</p>
+              <ul class="chip-list">
+                <li class="chip" data-i18n="chip.research">Research</li>
+                <li class="chip" data-i18n="chip.filming">Filming</li>
+                <li class="chip" data-i18n="chip.editing">Editing</li>
+                <li class="chip" data-i18n="chip.sound">Sound</li>
+                <li class="chip" data-i18n="chip.subtitles">Subtitles</li>
+                <li class="chip" data-i18n="chip.motion">Motion graphics</li>
+              </ul>
+            </div>
+            <img class="service-card__img" src="assets/img/services/films.svg" alt="Documentary filming on location" data-i18n-alt="services.films.alt" width="800" height="500" loading="lazy">
+          </li>
+          <li class="service-card service-card--cream">
+            <span class="service-card__num">02</span>
+            <div class="service-card__body">
+              <h3 class="service-card__title" data-i18n="services.comms.title">Communications strategy and management</h3>
+              <p data-i18n="services.comms.text">Strategy, messaging, content creation, digital publishing and performance reporting for organisations and brands. Delivered in French and English, through projects, campaigns or monthly agency partnerships.</p>
+              <ul class="chip-list">
+                <li class="chip" data-i18n="chip.strategy">Strategy</li>
+                <li class="chip" data-i18n="chip.messaging">Messaging</li>
+                <li class="chip" data-i18n="chip.content">Content</li>
+                <li class="chip" data-i18n="chip.publishing">Digital publishing</li>
+                <li class="chip" data-i18n="chip.reporting">Reporting</li>
+                <li class="chip">FR / EN</li>
+              </ul>
+            </div>
+            <img class="service-card__img" src="assets/img/services/comms.svg" alt="Communications planning session" data-i18n-alt="services.comms.alt" width="800" height="500" loading="lazy">
+          </li>
+          <li class="service-card service-card--sand">
+            <span class="service-card__num">03</span>
+            <div class="service-card__body">
+              <h3 class="service-card__title" data-i18n="services.photo.title">Photo and interactive storytelling</h3>
+              <p data-i18n="services.photo.text">Original photography, visual journalism, interactive digital experiences and social content, shaped for your audience and platform.</p>
+              <ul class="chip-list">
+                <li class="chip" data-i18n="chip.photography">Photography</li>
+                <li class="chip" data-i18n="chip.visualJournalism">Visual journalism</li>
+                <li class="chip" data-i18n="chip.interactive">Interactive</li>
+                <li class="chip" data-i18n="chip.social">Social content</li>
+              </ul>
+            </div>
+            <img class="service-card__img" src="assets/img/services/photo-interactive.svg" alt="Photographer at work" data-i18n-alt="services.photo.alt" width="800" height="500" loading="lazy">
+          </li>
+          <li class="service-card service-card--white">
+            <span class="service-card__num">04</span>
+            <div class="service-card__body">
+              <h3 class="service-card__title" data-i18n="services.talent.title">Local talent development and mentoring</h3>
+              <p data-i18n="services.talent.text">Practical storytelling and production training, mentorship and creative opportunities, delivered by Pinned Media or through collaboration with Acquire by Pin Africa.</p>
+              <ul class="chip-list">
+                <li class="chip" data-i18n="chip.training">Training</li>
+                <li class="chip" data-i18n="chip.mentorship">Mentorship</li>
+                <li class="chip" data-i18n="chip.opportunities">Creative opportunities</li>
+              </ul>
+            </div>
+            <img class="service-card__img" src="assets/img/services/talent.svg" alt="Mentoring session with emerging creatives" data-i18n-alt="services.talent.alt" width="800" height="500" loading="lazy">
+          </li>
+          <li class="service-card service-card--ink">
+            <svg class="service-card__lines" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <g fill="none" stroke="currentColor" stroke-width="1">
+                <ellipse cx="480" cy="330" rx="300" ry="300"/>
+                <ellipse cx="480" cy="330" rx="230" ry="300"/>
+                <ellipse cx="480" cy="330" rx="150" ry="300"/>
+                <ellipse cx="480" cy="330" rx="70" ry="300"/>
+                <ellipse cx="480" cy="330" rx="300" ry="220"/>
+                <ellipse cx="480" cy="330" rx="300" ry="130"/>
+                <ellipse cx="480" cy="330" rx="300" ry="50"/>
+              </g>
+            </svg>
+            <div class="service-card__final">
+              <p class="service-card__final-title" data-i18n="contact.title">Let’s tell your story</p>
+              <a class="btn btn--primary" href="#contact"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.getInTouch">Get in touch</span></a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== WHY PARTNERS CHOOSE PINNED MEDIA ===== -->
+    <section class="section why bg-cream" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <h2 class="section-title why__title reveal" id="why-title" data-i18n="why.title">Why partners choose Pinned Media</h2>
+        <ul class="why__grid">
+          <li class="why-card why-card--red reveal">
+            <svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <h3 class="why-card__title" data-i18n="why.local.title">Local knowledge and creative agency</h3>
+              <p data-i18n="why.local.text">Local creatives bring cultural knowledge and trusted relationships; contributors have a voice in how their stories are told.</p>
+            </div>
+          </li>
+          <li class="why-card why-card--photo reveal">
+            <img class="why-card__bg" src="assets/img/services/why-countries.svg" alt="" width="800" height="1000" loading="lazy">
+            <svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            <div>
+              <h3 class="why-card__title" data-i18n="why.countries.title">Several countries working together</h3>
+              <p data-i18n="why.countries.text">We coordinate teams across countries simultaneously, combining local expertise with central production management.</p>
+            </div>
+          </li>
+          <li class="why-card why-card--white reveal">
+            <svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg>
+            <div>
+              <h3 class="why-card__title" data-i18n="why.flexible.title">Flexible production and quick turnaround</h3>
+              <p data-i18n="why.flexible.text">Flexible teams, responsive delivery and practical approaches for a wide range of budgets.</p>
+            </div>
+          </li>
+          <li class="why-card why-card--photo reveal">
+            <img class="why-card__bg" src="assets/img/services/why-real-people.svg" alt="" width="800" height="1000" loading="lazy">
+            <svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19v3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><rect x="9" y="2" width="6" height="13" rx="3"/></svg>
+            <div>
+              <h3 class="why-card__title" data-i18n="why.real.title">Real people and a journalistic approach</h3>
+              <p data-i18n="why.real.text">Journalistic research, careful interviewing and editorial judgement shape our unscripted storytelling.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== THREE BRANDS ===== -->
+    <section class="section brands bg-white" id="platforms" aria-labelledby="brands-title">
+      <div class="container">
+        <div class="brands__head">
+          <h3 class="brands__title reveal" id="brands-title" data-i18n="brands.title">Production backed by journalism and talent development</h3>
+          <p class="brands__text reveal" data-i18n="brands.text">Founded by Benedicte Kalombo, the three platforms have distinct teams and complementary expertise. Their collaboration connects commissioned production with editorial insight and opportunities to develop local talent.</p>
+        </div>
+        <ol class="brand-strip">
+          <li class="brand-card brand-card--accent reveal">
+            <span class="brand-card__node" aria-hidden="true"></span>
+            <img class="brand-card__logo" src="assets/img/logos/pinned-media.svg" alt="Pinned Media logo (placeholder)" data-i18n-alt="brands.pm.alt" width="160" height="64" loading="lazy">
+            <p class="brand-card__role chip chip--red" data-i18n="brands.pm.role">Production</p>
+            <h4 class="brand-card__name">Pinned Media</h4>
+            <p data-i18n="brands.pm.text">Commissioned production and communications services.</p>
+          </li>
+          <li class="brand-card reveal">
+            <span class="brand-card__node" aria-hidden="true"></span>
+            <img class="brand-card__logo" src="assets/img/logos/pin-africa.svg" alt="Pin Africa logo (placeholder)" data-i18n-alt="brands.pa.alt" width="160" height="64" loading="lazy">
+            <p class="brand-card__role chip chip--teal" data-i18n="brands.pa.role">Journalism</p>
+            <h4 class="brand-card__name">Pin Africa</h4>
+            <p data-i18n="brands.pa.text">Independent journalism, story discovery and publishing.</p>
+          </li>
+          <li class="brand-card reveal">
+            <span class="brand-card__node" aria-hidden="true"></span>
+            <img class="brand-card__logo" src="assets/img/logos/acquire-by-pin-africa.svg" alt="Acquire by Pin Africa logo (placeholder)" data-i18n-alt="brands.ac.alt" width="160" height="64" loading="lazy">
+            <p class="brand-card__role chip chip--teal" data-i18n="brands.ac.role">Talent</p>
+            <h4 class="brand-card__name">Acquire by Pin Africa</h4>
+            <p data-i18n="brands.ac.text">Training, mentorship and emerging talent development.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== SELECTED WORK ===== -->
+    <section class="section work bg-ink" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head section-head--dark">
+          <div class="section-head__title">
+            <p class="eyebrow eyebrow--on-dark">02</p>
+            <h2 class="section-title reveal" id="work-title" data-i18n="work.title">Selected work</h2>
+          </div>
+          <p class="lede wipe" data-i18n="work.intro">Our work spans international productions and regional projects for FIFA, USAID via Chemonics, UNDP Africa and UN Sahel, and digital storytelling.</p>
+        </header>
+
+        <div class="work__grid">
+          <!-- Projet 1 : FIFA (carte large 21:9). Détail : <template id="project-fifa"> plus bas -->
+          <article class="project-card project-card--wide reveal" data-project="fifa">
+            <div class="project-card__media">
+              <img src="assets/img/work/fifa-cover.svg" alt="Africa Stories film still (placeholder)" data-i18n-alt="work.fifa.alt" width="1680" height="720" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <ul class="chip-list"><li class="chip">FIFA</li></ul>
+              <h3 class="project-card__title">Africa Stories</h3>
+              <p class="project-card__summary" data-i18n="work.fifa.summary">A short documentary series exploring how football unites people and communities across Africa.</p>
+              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="fifa" aria-haspopup="dialog">
+                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: Africa Stories</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 2 : USAID via Chemonics. La couverture doit être un visuel validé pour publication -->
+          <article class="project-card reveal" data-project="chemonics">
+            <div class="project-card__media">
+              <img src="assets/img/work/chemonics-cover.svg" alt="Livelihoods and resilience project (placeholder)" data-i18n-alt="work.chemonics.alt" width="1280" height="800" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <ul class="chip-list"><li class="chip">USAID via Chemonics</li></ul>
+              <h3 class="project-card__title" data-i18n="work.chemonics.title">Stories of livelihoods and resilience across four African countries</h3>
+              <p class="project-card__summary" data-i18n="work.chemonics.summary">Films, visual journalism and photography on livelihoods and resilience in Kenya, DRC, Mali and Uganda.</p>
+              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="chemonics" aria-haspopup="dialog">
+                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: USAID via Chemonics</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 3 : UNDP -->
+          <article class="project-card reveal" data-project="undp">
+            <div class="project-card__media">
+              <img src="assets/img/work/undp-cover.svg" alt="United Nations digital projects (placeholder)" data-i18n-alt="work.undp.alt" width="1280" height="800" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <ul class="chip-list"><li class="chip">UNDP</li></ul>
+              <h3 class="project-card__title" data-i18n="work.undp.title">Making development stories accessible</h3>
+              <p class="project-card__summary" data-i18n="work.undp.summary">Digital projects across UNDP Africa, TICAD and the UN’s Sahel work, combining storytelling, reporting tools and staff training.</p>
+              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="undp" aria-haspopup="dialog">
+                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: UNDP</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 4 : Women in Football -->
+          <article class="project-card reveal" data-project="women-in-football">
+            <div class="project-card__media">
+              <img src="assets/img/work/women-in-football-cover.svg" alt="Women in Football — Under Her Feet poster (placeholder)" data-i18n-alt="work.wif.alt" width="1280" height="800" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <ul class="chip-list"><li class="chip chip--red" data-i18n="ui.originalDev">Original development</li></ul>
+              <h3 class="project-card__title">Women in Football — Under Her Feet</h3>
+              <p class="project-card__summary" data-i18n="work.wif.summary">Three short documentaries on the women and communities shaping grassroots football in the UK.</p>
+              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="women-in-football" aria-haspopup="dialog">
+                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: Women in Football</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRAINING AND TALENT DEVELOPMENT ===== -->
+    <section class="section training bg-cream" id="training" aria-labelledby="training-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="section-head__title">
+            <p class="eyebrow">03</p>
+            <h2 class="section-title reveal" id="training-title" data-i18n="training.title">Training and talent development</h2>
+          </div>
+          <p class="lede wipe" data-i18n="training.intro">We help people turn creative potential into practical skills, finished work and new opportunities.</p>
+        </header>
+
+        <div class="training__grid">
+          <!-- Formation 1 : Creative Start -->
+          <article class="project-card training-card reveal">
+            <figure class="project-card__media">
+              <img src="assets/img/training/creative-start-workshop.svg" alt="Creative Start workshop (placeholder)" data-i18n-alt="training.cs.alt" width="1280" height="800" loading="lazy">
+            </figure>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Creative Start</h3>
+              <p class="training-card__meta"><strong data-i18n="training.partnersLabel">Partners:</strong> Better Space, LIFT, Islington Council and City, University of London</p>
+              <details class="read-more">
+                <summary><span data-i18n="ui.readMore">Read more</span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <dl class="read-more__body">
+                  <dt data-i18n="label.brief">The brief</dt>
+                  <dd data-i18n="training.cs.brief">Open creative-industry opportunities for residents from disadvantaged backgrounds.</dd>
+                  <dt data-i18n="label.weDelivered">What we delivered</dt>
+                  <dd data-i18n="training.cs.delivered">A 10-week Pinned Media digital storytelling programme combining online learning, in-person workshops, production skills and individual mentorship.</dd>
+                  <dt data-i18n="label.result">The result</dt>
+                  <dd data-i18n="training.cs.result">Participants created final projects and received certificates, with assessments supporting their end-of-programme grant approvals.</dd>
+                </dl>
+              </details>
+            </div>
+          </article>
+
+          <!-- Formation 2 : Mame Cheikh Mbaye -->
+          <article class="project-card training-card reveal">
+            <div class="project-card__media">
+              <div class="video-facade" data-video-id="Ennek61IP0M">
+                <img class="video-facade__poster" src="https://i.ytimg.com/vi/Ennek61IP0M/maxresdefault.jpg" data-yt-poster="Ennek61IP0M" alt="" width="1280" height="720" loading="lazy">
+                <button type="button" class="video-facade__play">
+                  <span class="play-dot" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span>
+                  <span class="sr-only"><span data-i18n="ui.playVideo">Play video</span>: <span data-i18n="training.mame.videoTitle">Mame Cheikh Mbaye’s debut short documentary</span></span>
+                </button>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title" data-i18n="training.mame.title">From photography to a first published film</h3>
+              <p class="training-card__meta"><strong data-i18n="training.platformsLabel">Platforms:</strong> Acquire by Pin Africa <span data-i18n="ui.and">and</span> Pin Africa</p>
+              <blockquote class="quote">
+                <p data-i18n="training.mame.quote">This platform enabled me to bring the everyday realities of ordinary Senegalese people to a global audience.</p>
+                <footer>— Mame Cheikh Mbaye, <cite>Acquire Progress and Impact Report 2023</cite></footer>
+              </blockquote>
+              <ul class="credits-inline">
+                <li><span data-i18n="credit.film">Film</span>: Mame Cheikh Mbaye</li>
+                <li><span data-i18n="credit.mentorship">Mentorship</span>: Acquire by Pin Africa</li>
+                <li><span data-i18n="credit.publication">Publication</span>: Pin Africa</li>
+              </ul>
+              <a class="link-underline link-external" href="https://youtu.be/Ennek61IP0M" target="_blank" rel="noopener"><span data-i18n="training.mame.watch">Watch Mame’s film</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span>
+                <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+              <details class="read-more">
+                <summary><span data-i18n="ui.readMore">Read more</span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <dl class="read-more__body">
+                  <dt data-i18n="label.brief">The brief</dt>
+                  <dd data-i18n="training.mame.brief">Help Dakar-based photographer Mame Cheikh Mbaye develop his documentary filmmaking skills.</dd>
+                  <dt data-i18n="label.wasDelivered">What was delivered</dt>
+                  <dd data-i18n="training.mame.delivered">Acquire’s mentorship supported Mame to develop, film and edit his debut short documentary.</dd>
+                  <dt data-i18n="label.result">The result</dt>
+                  <dd data-i18n="training.mame.result">Pin Africa published the film and paid Mame for his work, connecting skills development with a professional opportunity.</dd>
+                </dl>
+              </details>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLIENTS AND PARTNERS ===== -->
+    <section class="section clients bg-white" id="clients" aria-labelledby="clients-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="section-head__title">
+            <p class="eyebrow">04</p>
+            <h2 class="section-title reveal" id="clients-title" data-i18n="clients.title">Clients and partners</h2>
+          </div>
+          <p class="lede wipe" data-i18n="clients.text">International productions and regional projects for FIFA, USAID via Chemonics, UNDP Africa and UN Sahel.</p>
+        </header>
+        <!-- Logos : placeholders à remplacer par les logos approuvés (SVG ou PNG transparent) -->
+        <ul class="logo-row">
+          <li class="logo-row__item"><img src="assets/img/logos/fifa.svg" alt="FIFA" width="240" height="96" loading="lazy"></li>
+          <li class="logo-row__item">
+            <img src="assets/img/logos/usaid-via-chemonics.svg" alt="USAID via Chemonics" width="240" height="96" loading="lazy">
+            <span class="logo-row__caption">USAID via Chemonics</span>
+          </li>
+          <li class="logo-row__item"><img src="assets/img/logos/undp-africa.svg" alt="UNDP Africa" width="240" height="96" loading="lazy"></li>
+          <li class="logo-row__item"><img src="assets/img/logos/fcdo.svg" alt="FCDO" width="240" height="96" loading="lazy"></li>
+          <li class="logo-row__item"><img src="assets/img/logos/un-sahel.svg" alt="UN Sahel" width="240" height="96" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== HOW WE WORK ===== -->
+    <section class="process bg-ink" id="how-we-work" aria-labelledby="process-title" data-process>
+      <div class="process__sticky">
+        <div class="container">
+          <header class="section-head section-head--dark section-head--compact">
+            <div class="section-head__title">
+              <p class="eyebrow eyebrow--on-dark">05</p>
+              <h2 class="section-title" id="process-title" data-i18n="process.title">How we work</h2>
+            </div>
+          </header>
+
+          <div class="process__grid">
+            <div class="process__panels">
+              <div class="process-step" id="step-panel-1">
+                <span class="process-step__num" aria-hidden="true">01</span>
+                <h3 class="process-step__title" data-i18n="process.brief.title">Brief</h3>
+                <p data-i18n="process.brief.text">Engage us for a production project, a communications campaign or a monthly agency partnership. We agree your objectives, audience, budget, scope and approval process, with clear deliverables and measures of success.</p>
+              </div>
+              <div class="process-step" id="step-panel-2">
+                <span class="process-step__num" aria-hidden="true">02</span>
+                <h3 class="process-step__title" data-i18n="process.plan.title">Plan</h3>
+                <p data-i18n="process.plan.text">We research the story, listen to contributors and develop the editorial and visual approach. We connect the right local creatives, coordinate locations and plan a shared schedule for productions across one or several countries.</p>
+              </div>
+              <div class="process-step" id="step-panel-3">
+                <span class="process-step__num" aria-hidden="true">03</span>
+                <h3 class="process-step__title" data-i18n="process.produce.title">Produce</h3>
+                <p data-i18n="process.produce.text">Local filmmakers and creatives bring their knowledge, relationships and perspective to the production. We coordinate teams across countries simultaneously, capturing real people and unfolding stories with cultural nuance and care.</p>
+              </div>
+              <div class="process-step" id="step-panel-4">
+                <span class="process-step__num" aria-hidden="true">04</span>
+                <h3 class="process-step__title" data-i18n="process.deliver.title">Deliver</h3>
+                <p data-i18n="process.deliver.text">We deliver content and manage publishing across agreed channels. For monthly agency partnerships, we review performance and refine the communications plan with you.</p>
+              </div>
+            </div>
+
+            <div class="process__wheel">
+              <svg class="process__circle" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+                <circle cx="200" cy="200" r="170" fill="none" stroke="currentColor" stroke-width="1"/>
+                <circle class="process__arc" cx="200" cy="200" r="170" fill="none" stroke-width="2" pathLength="100"/>
+              </svg>
+              <div class="process__center" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg>
+              </div>
+              <div class="process__tabs" role="tablist" aria-label="How we work" data-i18n-aria-label="process.title">
+                <button type="button" class="process-node process-node--n" id="step-tab-1" role="tab" aria-controls="step-panel-1" aria-selected="true"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.brief.title">Brief</span></button>
+                <button type="button" class="process-node process-node--e" id="step-tab-2" role="tab" aria-controls="step-panel-2" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.plan.title">Plan</span></button>
+                <button type="button" class="process-node process-node--s" id="step-tab-3" role="tab" aria-controls="step-panel-3" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.produce.title">Produce</span></button>
+                <button type="button" class="process-node process-node--w" id="step-tab-4" role="tab" aria-controls="step-panel-4" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.deliver.title">Deliver</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRUSTED BY ===== -->
+    <section class="trusted bg-ink" aria-labelledby="trusted-title" data-trusted>
+      <div class="trusted__sticky">
+        <h2 class="trusted__title" id="trusted-title">
+          <span class="trusted__line1" data-i18n="trusted.line1">Trusted by</span>
+          <span class="trusted__line2" data-i18n="trusted.line2">NGOs, brands, publishers &amp; governments</span>
+        </h2>
+        <ul class="trusted__photos" aria-hidden="true">
+          <li class="trusted__photo" style="--x0:-38vw; --y0:-30vh; --r0:-9deg;"><img src="assets/img/bts/bts-01.svg" alt="" width="640" height="800" loading="lazy"></li>
+          <li class="trusted__photo" style="--x0:-12vw; --y0:34vh; --r0:7deg;"><img src="assets/img/bts/bts-02.svg" alt="" width="640" height="800" loading="lazy"></li>
+          <li class="trusted__photo" style="--x0:14vw; --y0:-36vh; --r0:-6deg;"><img src="assets/img/bts/bts-03.svg" alt="" width="640" height="800" loading="lazy"></li>
+          <li class="trusted__photo" style="--x0:38vw; --y0:28vh; --r0:10deg;"><img src="assets/img/bts/bts-04.svg" alt="" width="640" height="800" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== TEAM ===== -->
+    <section class="section team bg-cream" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="section-head__title">
+            <p class="eyebrow">06</p>
+            <h2 class="section-title reveal" id="team-title" data-i18n="team.title">Meet the team</h2>
+          </div>
+          <p class="team__intro reveal" data-i18n="team.intro">These are the four people you’re most likely to meet when you first get in touch. Behind them is an extensive team of filmmakers, producers, designers and local creatives across Africa and the diaspora, brought together around each project.</p>
+        </header>
+
+        <ul class="team__strip">
+          <!-- Membre : dupliquez un <li class="team-card"> pour ajouter une personne -->
+          <li class="team-card">
+            <div class="team-card__photo">
+              <img src="assets/img/team/benedicte-kalombo.svg" alt="Portrait of Benedicte Kalombo (placeholder)" data-i18n-alt="team.bk.alt" width="800" height="1000" loading="lazy">
+              <div class="team-card__id">
+                <h3 class="team-card__name">Benedicte Kalombo</h3>
+                <p class="chip chip--glass" data-i18n="team.bk.role">Founder and Executive Producer</p>
+              </div>
+            </div>
+            <p class="team-card__bio" id="bio-bk" data-i18n="team.bk.bio">Benedicte is a Congolese-born multimedia journalist and producer whose experience includes the BBC, ITN/ITV News, The Independent and New African Woman. Through Pinned Media, Pin Africa and Acquire by Pin Africa, she champions African and underrepresented voices. Her journalistic approach shapes our commitment to real people, cultural nuance and powerful visual storytelling.</p>
+            <button type="button" class="bio-toggle" aria-expanded="false" aria-controls="bio-bk" hidden><span data-i18n="ui.readMore">Read more</span></button>
+          </li>
+          <li class="team-card">
+            <div class="team-card__photo">
+              <img src="assets/img/team/ayo-sanusi.svg" alt="Portrait of Ayo Sanusi (placeholder)" data-i18n-alt="team.as.alt" width="800" height="1000" loading="lazy">
+              <div class="team-card__id">
+                <h3 class="team-card__name">Ayo Sanusi</h3>
+                <p class="chip chip--glass" data-i18n="team.as.role">Producer and Cinematographer</p>
+              </div>
+            </div>
+            <p class="team-card__bio" id="bio-as" data-i18n="team.as.bio">Ayo combines cinematography, producing and story development to create films that connect emotionally with audiences. His individual credits include work with the Premier League and DAZN as a cinematographer and producer, alongside experience on the ground at the FIFA World Cup in Qatar. He brings this visual craft and understanding of football culture to our unscripted storytelling.</p>
+            <button type="button" class="bio-toggle" aria-expanded="false" aria-controls="bio-as" hidden><span data-i18n="ui.readMore">Read more</span></button>
+          </li>
+          <li class="team-card">
+            <div class="team-card__photo">
+              <img src="assets/img/team/letitia-kamayi.svg" alt="Portrait of Letitia Kamayi (placeholder)" data-i18n-alt="team.lk.alt" width="800" height="1000" loading="lazy">
+              <div class="team-card__id">
+                <h3 class="team-card__name">Letitia Kamayi</h3>
+                <p class="chip chip--glass" data-i18n="team.lk.role">Production Manager and Technical Lead</p>
+              </div>
+            </div>
+            <p class="team-card__bio" id="bio-lk" data-i18n="team.lk.bio">A photographer with a precise eye for lighting, Letitia manages production on the ground and coordinates the technical setup. Her knowledge of cameras and equipment helps ensure every crew has the tools and support to bring the story to life.</p>
+            <button type="button" class="bio-toggle" aria-expanded="false" aria-controls="bio-lk" hidden><span data-i18n="ui.readMore">Read more</span></button>
+          </li>
+          <li class="team-card">
+            <div class="team-card__photo">
+              <img src="assets/img/team/janette-daramy.svg" alt="Portrait of Janette Daramy (placeholder)" data-i18n-alt="team.jd.alt" width="800" height="1000" loading="lazy">
+              <div class="team-card__id">
+                <h3 class="team-card__name">Janette Daramy</h3>
+                <p class="chip chip--glass" data-i18n="team.jd.role">Production Operations Manager</p>
+              </div>
+            </div>
+            <p class="team-card__bio" id="bio-jd" data-i18n="team.jd.bio">Janette keeps productions organised behind the scenes, developing budgets, tracking projects and coordinating locations, personnel and client communication. She brings the planning and oversight that help our teams deliver smoothly across locations.</p>
+            <button type="button" class="bio-toggle" aria-expanded="false" aria-controls="bio-jd" hidden><span data-i18n="ui.readMore">Read more</span></button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact bg-white" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__main">
+          <p class="eyebrow">07</p>
+          <h2 class="section-title reveal" id="contact-title" data-i18n="contact.title">Let’s tell your story</h2>
+          <p class="contact__intro reveal" data-i18n="contact.intro">Looking for a production and communications agency? Tell us your goals, audience and budget. We deliver projects, campaigns and monthly agency services in French and English.</p>
+          <a class="contact__mail" href="mailto:info@pinned-media.com">info@pinned-media.com</a>
+          <!-- TODO: URL du portfolio. Renseignez href puis retirez l'attribut hidden. -->
+          <a class="btn btn--secondary contact__portfolio" href="#" target="_blank" rel="noopener" hidden><span class="btn__dot" aria-hidden="true"></span><span data-i18n="contact.portfolio">Explore Benedicte’s portfolio</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
+        </div>
+        <aside class="contact-card" aria-label="Benedicte Kalombo">
+          <img class="contact-card__photo" src="assets/img/team/benedicte-kalombo.svg" alt="Portrait of Benedicte Kalombo (placeholder)" data-i18n-alt="team.bk.alt" width="800" height="1000" loading="lazy">
+          <div class="contact-card__body">
+            <p class="contact-card__name">Benedicte Kalombo</p>
+            <p class="contact-card__role" data-i18n="team.bk.role">Founder and Executive Producer</p>
+            <ul class="chip-list" aria-label="Languages" data-i18n-aria-label="ui.languages">
+              <li class="chip">English</li>
+              <li class="chip" lang="fr">Français</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer bg-ink">
+    <div class="container site-footer__grid">
+      <div class="site-footer__visual">
+        <img src="assets/img/footer/footer-image.svg" alt="" width="900" height="1200" loading="lazy">
+        <p class="site-footer__wordmark" aria-hidden="true">Pinned<br>Media</p>
+      </div>
+      <div class="site-footer__content">
+        <p class="site-footer__tagline" data-i18n="hero.title">Stories with impact</p>
+        <a class="btn btn--primary" href="#contact"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.getInTouch">Get in touch</span></a>
+        <hr class="rule rule--dark">
+        <div class="site-footer__cols">
+          <div>
+            <p class="site-footer__label" data-i18n="ui.enquiries">Enquiries</p>
+            <a class="link-underline" href="mailto:info@pinned-media.com">info@pinned-media.com</a>
+            <div class="lang-switch lang-switch--dark" role="group" aria-label="Language" data-i18n-aria-label="ui.language">
+              <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="true" lang="en">EN</button>
+              <button type="button" class="lang-switch__btn" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+            </div>
+          </div>
+          <nav aria-label="Footer" data-i18n-aria-label="ui.footerNav">
+            <ul class="site-footer__links">
+              <li><a href="#what-we-do" data-i18n="nav.whatWeDo">What we do</a></li>
+              <li><a href="#work" data-i18n="nav.work">Selected work</a></li>
+              <li><a href="#training" data-i18n="nav.training">Training</a></li>
+              <li><a href="#clients" data-i18n="nav.clients">Clients</a></li>
+              <li><a href="#how-we-work" data-i18n="nav.howWeWork">How we work</a></li>
+              <li><a href="#team" data-i18n="nav.team">Team</a></li>
+              <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-footer__bottom">
+          <p>© <span data-year>2026</span> Pinned Media</p>
+          <button type="button" class="link-underline footer-privacy" data-open-privacy aria-haspopup="dialog" data-i18n="ui.privacy">Privacy</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== DIALOGS ===== -->
+
+  <!-- Modale projet : le contenu est cloné depuis <template id="project-slug"> -->
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+    <div class="project-dialog__panel">
+      <button type="button" class="project-dialog__close icon-btn" data-dialog-close>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        <span class="sr-only" data-i18n="ui.close">Close</span>
+      </button>
+      <div class="project-dialog__content" data-project-content></div>
+      <nav class="project-dialog__nav" aria-label="Projects" data-i18n-aria-label="ui.projectsNav">
+        <button type="button" class="btn btn--ghost" data-project-prev>
+          <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          <span data-i18n="ui.prevProject">Previous project</span>
+        </button>
+        <button type="button" class="btn btn--ghost" data-project-next>
+          <span data-i18n="ui.nextProject">Next project</span>
+          <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+      </nav>
+    </div>
+  </dialog>
+
+  <!-- Modale vidéo (vidéo d'en-tête) -->
+  <dialog class="video-dialog" id="video-dialog" aria-label="Video" data-i18n-aria-label="ui.video">
+    <button type="button" class="video-dialog__close icon-btn icon-btn--light" data-dialog-close>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      <span class="sr-only" data-i18n="ui.close">Close</span>
+    </button>
+    <div class="video-dialog__frame" data-video-frame></div>
+  </dialog>
+
+  <!-- Lightbox des galeries -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer" data-i18n-aria-label="ui.imageViewer">
+    <button type="button" class="lightbox__close icon-btn icon-btn--light" data-dialog-close>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      <span class="sr-only" data-i18n="ui.close">Close</span>
+    </button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" src="" alt="" width="1200" height="800">
+      <figcaption class="lightbox__caption"><span data-lightbox-caption></span> <span class="lightbox__credit" data-lightbox-credit></span></figcaption>
+    </figure>
+    <p class="lightbox__counter" aria-live="polite"><span data-lightbox-index>1</span> / <span data-lightbox-total>1</span></p>
+    <button type="button" class="lightbox__prev icon-btn icon-btn--light" data-lightbox-prev>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m15 18-6-6 6-6"/></svg>
+      <span class="sr-only" data-i18n="ui.prevImage">Previous image</span>
+    </button>
+    <button type="button" class="lightbox__next icon-btn icon-btn--light" data-lightbox-next>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg>
+      <span class="sr-only" data-i18n="ui.nextImage">Next image</span>
+    </button>
+  </dialog>
+
+  <!-- Privacy -->
+  <dialog class="privacy-dialog" id="privacy-dialog" aria-labelledby="privacy-title">
+    <button type="button" class="project-dialog__close icon-btn" data-dialog-close>
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      <span class="sr-only" data-i18n="ui.close">Close</span>
+    </button>
+    <h2 class="privacy-dialog__title" id="privacy-title" data-i18n="ui.privacy">Privacy</h2>
+    <!-- TODO : coller ici la politique de confidentialité approuvée -->
+    <p class="privacy-dialog__placeholder" data-i18n="privacy.placeholder">[Privacy notice to be supplied and approved]</p>
+  </dialog>
+
+
+  <!-- =====================================================================
+       DÉTAILS DES PROJETS
+       Un <template id="project-SLUG"> par carte <article data-project="SLUG">.
+       Le contenu n'est affiché qu'à l'ouverture de la modale.
+       ===================================================================== -->
+
+  <!-- ===== PROJET : FIFA ===== -->
+  <template id="project-fifa">
+    <header class="pd-head">
+      <ul class="chip-list"><li class="chip">FIFA</li></ul>
+      <h2 class="pd-title" id="project-dialog-title">Africa Stories</h2>
+    </header>
+    <p class="pd-intro" data-i18n="fifa.intro">A short documentary series exploring how football unites people, strengthens communities and reflects the many ways the game is celebrated across Africa—from local pitches and neighbourhood gatherings to shared moments of pride, belonging and social change.</p>
+    <ul class="chip-list pd-countries" aria-label="Countries" data-i18n-aria-label="ui.countries">
+      <li class="chip chip--teal" data-i18n="country.kenya">Kenya</li>
+      <li class="chip chip--teal" data-i18n="country.nigeria">Nigeria</li>
+      <li class="chip chip--teal" data-i18n="country.morocco">Morocco</li>
+      <li class="chip chip--teal" data-i18n="country.senegal">Senegal</li>
+    </ul>
+    <ol class="pd-blocks">
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">01</span><span data-i18n="label.brief">The brief</span></h3>
+        <p data-i18n="fifa.brief">Create a series of cinematic, human-led documentaries exploring what football means to people and communities across Africa. Set against the journey to the 2022 FIFA World Cup, the films needed to reach beyond match coverage to reveal how the game shapes identity, opportunity and belonging. FIFA wanted compelling stories, striking visuals and authentic African voices that would resonate locally and engage audiences around the world.</p>
+      </li>
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">02</span><span data-i18n="label.weMade">What we made</span></h3>
+        <p data-i18n="fifa.made">We sourced and developed stories across Kenya, Nigeria, Morocco and Senegal, working with local filmmakers and contributors to deliver end-to-end production, from research and filming through editing and final delivery, including social media cuts. The unscripted films explored women’s empowerment in football, inclusion through a team of players with albinism, community outreach, and the family legacy of a local club with a global presence. Each story combined cinematic visuals with the voices and lived experiences of the people at its heart.</p>
+      </li>
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">03</span><span data-i18n="label.result">The result</span></h3>
+        <p data-i18n="fifa.result">The series was released on FIFA+.</p>
+      </li>
+    </ol>
+    <div class="pd-media">
+      <div class="media-group">
+        <h3 class="pd-sub" data-i18n="fifa.trailer">Our trailer</h3>
+        <div class="video-facade" data-video-id="UKaHXBcJgIw">
+          <img class="video-facade__poster" src="https://i.ytimg.com/vi/UKaHXBcJgIw/maxresdefault.jpg" data-yt-poster="UKaHXBcJgIw" alt="" width="1280" height="720" loading="lazy">
+          <button type="button" class="video-facade__play">
+            <span class="play-dot" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span>
+            <span class="sr-only"><span data-i18n="ui.playVideo">Play video</span>: <span data-i18n="fifa.trailerTitle">Africa Stories trailer</span></span>
+          </button>
+        </div>
+        <a class="btn btn--primary" href="https://www.dazn.com/en-GB/competition/Competition:dvud28koovba4f0nsr6n8lj5j" target="_blank" rel="noopener"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="fifa.watchAll">Watch all Africa Stories</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
+      </div>
+    </div>
+    <section class="pd-credits" aria-labelledby="credits-fifa">
+      <h3 class="pd-sub" id="credits-fifa" data-i18n="ui.credits">Credits</h3>
+      <!-- Crédits : rôle / nom / plateforme. À compléter avec les noms validés -->
+      <dl class="credits">
+        <div><dt data-i18n="credit.client">Client</dt><dd>FIFA</dd></div>
+        <div><dt data-i18n="credit.production">Production</dt><dd>Pinned Media</dd></div>
+        <div><dt data-i18n="credit.crew">Crew</dt><dd data-i18n="ui.creditsTbc">[Individual credits to be confirmed]</dd></div>
+      </dl>
+    </section>
+  </template>
+
+  <!-- ===== PROJET : USAID VIA CHEMONICS =====
+       CONFIDENTIALITÉ : chaque média porte data-cleared="false".
+       Masqué par défaut, visible seulement avec ?preview dans l'URL.
+       Pour publier un média : data-cleared="true". -->
+  <template id="project-chemonics">
+    <header class="pd-head">
+      <ul class="chip-list"><li class="chip">USAID via Chemonics</li></ul>
+      <h2 class="pd-title" id="project-dialog-title" data-i18n="work.chemonics.title">Stories of livelihoods and resilience across four African countries</h2>
+    </header>
+    <ul class="chip-list pd-countries" aria-label="Countries" data-i18n-aria-label="ui.countries">
+      <li class="chip chip--teal" data-i18n="country.kenya">Kenya</li>
+      <li class="chip chip--teal" data-i18n="country.drc">Democratic Republic of Congo</li>
+      <li class="chip chip--teal" data-i18n="country.mali">Mali</li>
+      <li class="chip chip--teal" data-i18n="country.uganda">Uganda</li>
+    </ul>
+    <ol class="pd-blocks">
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">01</span><span data-i18n="label.brief">The brief</span></h3>
+        <p data-i18n="chemonics.brief">Bring the human stories behind agriculture, food security and development programmes into focus. Chemonics needed photography, video and human-interest storytelling that showed people’s experiences of investment, livelihoods and resilience, with particular attention to women, young people and underrepresented communities.</p>
+      </li>
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">02</span><span data-i18n="label.weMade">What we made</span></h3>
+        <p data-i18n="chemonics.made1">We delivered films, visual journalism stories and photography in each of the four countries—Kenya, the Democratic Republic of Congo, Mali and Uganda—working across multiple cities and locations to bring local experiences of livelihoods, investment and resilience into focus.</p>
+        <p data-i18n="chemonics.made2">For this project, our team handled the complete production: story development, journalistic interviews, photography, filming, editing, motion animation, graphs, graphics, translations and subtitles and captions. We brought the reporting, visuals and design together into finished stories, from the first interview to the final animated detail.</p>
+      </li>
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">03</span><span data-i18n="label.result">The result</span></h3>
+        <p data-i18n="chemonics.result">A collection of films, visual journalism stories and photographs spanning four countries, delivered through one coordinated production team. The work combined local reporting with original imagery, animation and data visuals to make complex development stories accessible and engaging.</p>
+      </li>
+    </ol>
+    <div class="pd-media" data-media-section>
+      <h3 class="pd-sub pd-sub--lg" data-i18n="chemonics.exploreTitle">Explore the work</h3>
+      <p data-i18n="chemonics.exploreIntro">The examples below are a selection from the wider project. Films, visual journalism stories and photography were produced for all four countries.</p>
+
+      <div class="media-group">
+        <h4 class="pd-sub" data-i18n="chemonics.kenyaFilmTitle">Watch the Kenya film</h4>
+        <p data-i18n="chemonics.kenyaFilmText">A film bringing community voices and lived experiences to the screen.</p>
+        <div class="video-facade media-item" data-video-id="8gSHJpLcfMo" data-cleared="false">
+          <img class="video-facade__poster" src="https://i.ytimg.com/vi/8gSHJpLcfMo/maxresdefault.jpg" data-yt-poster="8gSHJpLcfMo" alt="" width="1280" height="720" loading="lazy">
+          <button type="button" class="video-facade__play">
+            <span class="play-dot" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span>
+            <span class="sr-only"><span data-i18n="ui.playVideo">Play video</span>: <span data-i18n="chemonics.kenyaFilmTitle">Watch the Kenya film</span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="media-group">
+        <h4 class="pd-sub" data-i18n="chemonics.vjTitle">Explore the visual journalism</h4>
+        <p data-i18n="chemonics.vjText">Discover stories from Kenya and the Democratic Republic of Congo, combining original reporting, photography, film, animation and graphics.</p>
+        <div class="story-grid">
+          <article class="story-card media-item" data-cleared="false">
+            <img src="assets/img/work/chemonics-kenya-story.svg" alt="Kenya visual journalism story preview (placeholder)" data-i18n-alt="chemonics.kenyaStoryAlt" width="1280" height="800" loading="lazy">
+            <div class="story-card__body">
+              <h5 class="story-card__title" data-i18n="country.kenya">Kenya</h5>
+              <a class="btn btn--secondary" href="https://a-pin-africa.vev.site/kenya-fishing" target="_blank" rel="noopener"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.exploreStory">Explore the story</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
+            </div>
+          </article>
+          <article class="story-card media-item" data-cleared="false">
+            <img src="assets/img/work/chemonics-drc-story.svg" alt="Democratic Republic of Congo visual journalism story preview (placeholder)" data-i18n-alt="chemonics.drcStoryAlt" width="1280" height="800" loading="lazy">
+            <div class="story-card__body">
+              <h5 class="story-card__title" data-i18n="country.drc">Democratic Republic of Congo</h5>
+              <a class="btn btn--secondary" href="https://a-pin-africa.vev.site/demo" target="_blank" rel="noopener"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.exploreStory">Explore the story</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="media-group">
+        <h4 class="pd-sub" data-i18n="chemonics.photoTitle">View the photography</h4>
+        <p data-i18n="chemonics.photoText">A selection of our original photographs from Mali and Uganda.</p>
+
+        <h5 class="gallery-label" data-i18n="country.mali">Mali</h5>
+        <!-- Galerie Mali : remplacez chaque src, alt, légende et crédit -->
+        <ul class="gallery" data-gallery="mali">
+          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-mali-01.svg" alt="Mali photograph 1 (placeholder)" data-i18n-alt="gallery.mali1" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
+          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-mali-02.svg" alt="Mali photograph 2 (placeholder)" data-i18n-alt="gallery.mali2" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
+          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-mali-03.svg" alt="Mali photograph 3 (placeholder)" data-i18n-alt="gallery.mali3" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
+          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-mali-04.svg" alt="Mali photograph 4 (placeholder)" data-i18n-alt="gallery.mali4" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
+        </ul>
+
+        <h5 class="gallery-label" data-i18n="country.uganda">Uganda</h5>
+        <!-- Galerie Ouganda -->
+        <ul class="gallery" data-gallery="uganda">
+          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-uganda-01.svg" alt="Uganda photograph 1 (placeholder)" data-i18n-alt="gallery.uganda1" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
+          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-uganda-02.svg" alt="Uganda photograph 2 (placeholder)" data-i18n-alt="gallery.uganda2" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
+          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-uganda-03.svg" alt="Uganda photograph 3 (placeholder)" data-i18n-alt="gallery.uganda3" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
+          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-uganda-04.svg" alt="Uganda photograph 4 (placeholder)" data-i18n-alt="gallery.uganda4" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
+        </ul>
+      </div>
+    </div>
+    <section class="pd-credits" aria-labelledby="credits-chemonics">
+      <h3 class="pd-sub" id="credits-chemonics" data-i18n="ui.credits">Credits</h3>
+      <dl class="credits">
+        <div><dt data-i18n="credit.client">Client</dt><dd>USAID via Chemonics</dd></div>
+        <div><dt data-i18n="credit.production">Production</dt><dd>Pinned Media</dd></div>
+        <div><dt data-i18n="credit.crew">Crew</dt><dd data-i18n="ui.creditsTbc">[Individual credits to be confirmed]</dd></div>
+      </dl>
+    </section>
+  </template>
+
+  <!-- ===== PROJET : UNDP ===== -->
+  <template id="project-undp">
+    <header class="pd-head">
+      <ul class="chip-list"><li class="chip">UNDP</li></ul>
+      <h2 class="pd-title" id="project-dialog-title" data-i18n="work.undp.title">Making development stories accessible</h2>
+    </header>
+    <p class="pd-intro" data-i18n="work.undp.summary">Digital projects across UNDP Africa, TICAD and the UN’s Sahel work, combining storytelling, reporting tools and staff training.</p>
+    <ol class="pd-blocks">
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">01</span><span data-i18n="label.brief">The brief</span></h3>
+        <p data-i18n="undp.brief">Create accessible digital platforms to showcase African innovation, support development reporting and help UN teams manage their content.</p>
+      </li>
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">02</span><span data-i18n="label.weMade">What we made</span></h3>
+        <ul class="pd-list">
+          <li data-i18n="undp.made1"><strong>UNDP Africa:</strong> A website profiling 50 young African innovators tackling COVID-19, under the African Influencers for Development Initiative. It accompanied a magazine launched during the UN General Assembly in 2020.</li>
+          <li data-i18n="undp.made2"><strong>TICAD:</strong> A website and reporting tool, developed through collaboration with stakeholders including Japan’s Ministry of Foreign Affairs, the World Bank and the African Union.</li>
+          <li data-i18n="undp.made3"><strong>UN Sahel:</strong> A website for the United Nations’ Sahel unit under UNDP, alongside staff training in Dakar on using and maintaining it.</li>
+        </ul>
+      </li>
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">03</span><span data-i18n="label.result">The result</span></h3>
+        <p data-i18n="undp.result">Digital platforms for showcasing innovation and reporting on development, with Sahel staff trained to maintain and update their website.</p>
+      </li>
+    </ol>
+    <div class="pd-media">
+      <div class="media-group">
+        <h3 class="pd-sub" data-i18n="ui.sampleOfWork">Sample of work</h3>
+        <div class="site-grid">
+          <article class="story-card">
+            <img src="assets/img/work/undp-africa-innovators.svg" alt="UNDP Africa innovators website preview (placeholder)" data-i18n-alt="undp.alt1" width="1280" height="800" loading="lazy">
+            <div class="story-card__body">
+              <h4 class="story-card__title" data-i18n="undp.site1">UNDP Africa innovators</h4>
+              <!-- TODO: URL -->
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noopener" hidden><span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.visitWebsite">Visit website</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
+            </div>
+          </article>
+          <article class="story-card">
+            <img src="assets/img/work/ticad-reporting-tool.svg" alt="TICAD reporting tool preview (placeholder)" data-i18n-alt="undp.alt2" width="1280" height="800" loading="lazy">
+            <div class="story-card__body">
+              <h4 class="story-card__title" data-i18n="undp.site2">TICAD reporting tool</h4>
+              <!-- TODO: URL -->
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noopener" hidden><span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.visitWebsite">Visit website</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
+            </div>
+          </article>
+          <article class="story-card">
+            <img src="assets/img/work/un-sahel.svg" alt="UN Sahel website preview (placeholder)" data-i18n-alt="undp.alt3" width="1280" height="800" loading="lazy">
+            <div class="story-card__body">
+              <h4 class="story-card__title">UN Sahel</h4>
+              <!-- TODO: URL -->
+              <a class="btn btn--secondary" href="#" target="_blank" rel="noopener" hidden><span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.visitWebsite">Visit website</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <section class="pd-credits" aria-labelledby="credits-undp">
+      <h3 class="pd-sub" id="credits-undp" data-i18n="ui.credits">Credits</h3>
+      <dl class="credits">
+        <div><dt data-i18n="credit.client">Client</dt><dd>UNDP</dd></div>
+        <div><dt data-i18n="credit.production">Production</dt><dd>Pinned Media</dd></div>
+        <div><dt data-i18n="credit.crew">Crew</dt><dd data-i18n="ui.creditsTbc">[Individual credits to be confirmed]</dd></div>
+      </dl>
+    </section>
+  </template>
+
+  <!-- ===== PROJET : WOMEN IN FOOTBALL ===== -->
+  <template id="project-women-in-football">
+    <header class="pd-head">
+      <ul class="chip-list"><li class="chip chip--red" data-i18n="ui.originalDev">Original development</li></ul>
+      <h2 class="pd-title" id="project-dialog-title">Women in Football — Under Her Feet</h2>
+      <p class="pd-type" data-i18n="wif.type">Pinned Media original development project</p>
+    </header>
+    <ol class="pd-blocks">
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">01</span><span data-i18n="label.brief">The brief</span></h3>
+        <p data-i18n="wif.brief">Develop an original documentary series celebrating the women and communities shaping grassroots football in the UK. Conceived as a six-part format, the project explored everyday participation, faith, representation and the people and organisations opening doors for women in the game. The ambition was to reach beyond established football audiences through intimate, relatable stories of identity, opportunity and belonging.</p>
+      </li>
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">02</span><span data-i18n="label.weMade">What we made</span></h3>
+        <p data-i18n="wif.made">We developed the concept, sourced contributors and produced three short documentaries exploring everyday women in football, Muslim women’s experiences of the game, and the organisations creating opportunities for women and girls. Through personal interviews, observational filming and football action, we connected life on the pitch with the people and communities behind it.</p>
+      </li>
+      <li class="pd-block">
+        <h3 class="pd-block__title"><span class="pd-block__num" aria-hidden="true">03</span><span data-i18n="label.result">The result</span></h3>
+        <p data-i18n="wif.result">Three original short documentaries that generated interest among commissioners and demonstrated our ability to discover compelling contributors, develop an unscripted format and bring underrepresented football stories to the screen.</p>
+      </li>
+    </ol>
+    <div class="pd-media">
+      <div class="media-group">
+        <h3 class="pd-sub" data-i18n="ui.sampleOfWork">Sample of work</h3>
+        <figure class="poster">
+          <img src="assets/img/work/women-in-football-poster.svg" alt="Women in Football — Under Her Feet poster (placeholder)" data-i18n-alt="work.wif.alt" width="800" height="1200" loading="lazy">
+          <figcaption class="credit">© Pinned Media</figcaption>
+        </figure>
+      </div>
+    </div>
+    <section class="pd-credits" aria-labelledby="credits-wif">
+      <h3 class="pd-sub" id="credits-wif" data-i18n="ui.credits">Credits</h3>
+      <dl class="credits">
+        <div><dt data-i18n="credit.type">Project type</dt><dd data-i18n="wif.type">Pinned Media original development project</dd></div>
+        <div><dt data-i18n="credit.production">Production</dt><dd>Pinned Media</dd></div>
+        <div><dt data-i18n="credit.crew">Crew</dt><dd data-i18n="ui.creditsTbc">[Individual credits to be confirmed]</dd></div>
+      </dl>
+    </section>
+  </template>
+
+</body>
+</html>

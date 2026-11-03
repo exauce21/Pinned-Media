@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="96" viewBox="0 0 240 96" role="img" aria-label="Logo FCDO (placeholder)">
+  <!-- Placeholder : déposez ici le logo approuvé (FCDO). Ne pas redessiner le logo. -->
+  <rect x="1" y="1" width="238" height="94" rx="12" fill="#FFFFFF" stroke="#0F878A" stroke-opacity="0.45" stroke-dasharray="6 6"/>
+  <text x="120.0" y="38.0" fill="#55625F" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2" text-anchor="middle" dominant-baseline="central">LOGO</text>
+  <text x="120.0" y="60.0" fill="#0B6466" font-family="Manrope, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="central">FCDO</text>
+</svg>

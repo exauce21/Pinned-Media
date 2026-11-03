@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-label="PHOTO · Workshop photograph · 16:10">
+  <!-- Placeholder Pinned Media. Remplacez ce fichier par la photo approuvée (mêmes proportions : 16:10). -->
+  <defs>
+    <pattern id="d" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="24" stroke="#D9CFBD" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="800" fill="#ECE5D8"/>
+  <rect width="1280" height="800" fill="url(#d)"/>
+  <rect x="332" y="369" width="616" height="62" rx="31" fill="#F8F5EF"/>
+  <text x="640" y="400" fill="#14201F" font-family="Manrope, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="1" text-anchor="middle" dominant-baseline="central">PHOTO · Workshop photograph · 16:10</text>
+</svg>

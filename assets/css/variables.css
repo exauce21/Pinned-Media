@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Pinned Media — design tokens
+   Toutes les couleurs, polices, tailles, espacements et rayons du site.
+   Modifiez une valeur ici : elle s'applique partout.
+   ========================================================================== */
+
+/* ---------- Polices auto-hébergées (woff2 variables, sous-ensemble latin) ---------- */
+@font-face {
+  font-family: "Cinzel";
+  src: url("../fonts/cinzel-variable.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/manrope-variable.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- Couleurs de marque ---------- */
+  --red: #E61D24;        /* CTA, état actif, grands titres d'accent */
+  --red-deep: #AD1B1F;   /* hover des CTA, petit texte rouge sur fond clair */
+  --teal: #0F878A;       /* icônes, filets, cercle du processus, bordures de chips */
+
+  /* ---------- Couleurs dérivées ---------- */
+  --ink: #062A2B;        /* fond des sections sombres */
+  --ink-2: #0A3B3D;      /* cartes sur fond sombre */
+  --teal-deep: #0B6466;  /* liens et petit texte teal sur fond clair */
+  --teal-light: #7FCFD0; /* petit texte d'accent et focus sur fond --ink */
+  --red-light: #F4868A;  /* petit texte rouge sur fond --ink */
+  --cream: #F8F5EF;      /* fond clair principal */
+  --sand: #ECE5D8;       /* cartes alternatives et placeholders */
+  --white: #FFFFFF;
+  --text: #14201F;       /* texte principal */
+  --muted: #55625F;      /* texte secondaire */
+  --red-tint: #FCE9E9;
+  --teal-tint: #E2F1F1;
+
+  --line-light: rgba(20, 32, 31, 0.14);   /* filets sur fond clair */
+  --line-dark: rgba(255, 255, 255, 0.16); /* filets sur fond sombre */
+  --chip-border: rgba(15, 135, 138, 0.3); /* --teal à 30 % */
+
+  /* ---------- Typographie ---------- */
+  --font-display: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  --font-body: "Manrope", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  --fs-h1: clamp(2.75rem, 7vw, 6rem);
+  --fs-h2: clamp(2rem, 4.5vw, 3.5rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.625rem);
+  --fs-lede: clamp(1.375rem, 2.6vw, 2.25rem);
+  --fs-body: 1.0625rem;
+  --fs-small: 0.875rem;
+  --fs-eyebrow: 0.8125rem;
+  --fs-button: 0.875rem;
+  --fs-chip: 0.75rem;
+
+  --lh-h1: 1.05;
+  --lh-h2: 1.1;
+  --lh-lede: 1.25;
+  --lh-body: 1.65;
+
+  /* ---------- Mise en page ---------- */
+  --container: 1200px;
+  --gutter: 24px;
+  --section-pad: clamp(80px, 10vw, 140px);
+  --header-h: 76px;
+
+  /* ---------- Rayons ---------- */
+  --radius-card: 20px;
+  --radius-card-sm: 16px;
+  --radius-img: 12px;
+  --radius-pill: 999px;
+
+  /* ---------- Mouvement ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 200ms;
+  --dur: 400ms;
+  --dur-slow: 900ms;
+
+  /* ---------- Focus ---------- */
+  --focus-ring: var(--teal-deep);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 16px;
+    --header-h: 64px;
+  }
+}

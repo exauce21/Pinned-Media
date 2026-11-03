@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="PHOTO · Tournage documentaire · 16:10">
+  <!-- Placeholder Pinned Media. Remplacez ce fichier par la photo approuvée (mêmes proportions : 16:10). -->
+  <defs>
+    <pattern id="d" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="24" stroke="#D9CFBD" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="#ECE5D8"/>
+  <rect width="800" height="500" fill="url(#d)"/>
+  <rect x="200" y="231" width="399" height="38" rx="19" fill="#F8F5EF"/>
+  <text x="400" y="250" fill="#14201F" font-family="Manrope, 'Segoe UI', Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="1" text-anchor="middle" dominant-baseline="central">PHOTO · Tournage documentaire · 16:10</text>
+</svg>
