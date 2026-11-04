@@ -1049,8 +1049,8 @@ html:not(.is-preview) [data-cleared="false"] {
 }
 
 .service-card--white { background: var(--white); }
-.service-card--cream { background: var(--cream); }
-.service-card--sand { background: var(--sand); }
+.service-card--cream { background: var(--white); }
+.service-card--sand { background: var(--white); }
 
 .service-card__num {
   font-family: var(--font-display);
@@ -2189,6 +2189,7 @@ html:not(.is-preview) [data-cleared="false"] {
 
 .site-footer__cols {
   display: grid;
+  align-items: center;
   gap: 32px;
   width: 100%;
 }
@@ -2223,13 +2224,14 @@ html:not(.is-preview) [data-cleared="false"] {
 }
 
 .site-footer__links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 35px;
 }
 
 @media (min-width: 900px) {
-  .site-footer__links { grid-template-columns: repeat(3, 1fr); }
+  .site-footer__links { flex-wrap: nowrap; }
+  .site-footer__links a { white-space: nowrap; }
 }
 
 .site-footer__links a {
@@ -2242,6 +2244,7 @@ html:not(.is-preview) [data-cleared="false"] {
 
 .site-footer__links a:hover {
   color: var(--white);
+  color: var(--red);
   text-decoration: underline;
   text-underline-offset: 4px;
 }

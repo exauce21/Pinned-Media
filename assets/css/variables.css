@@ -23,7 +23,10 @@
 
 :root {
   /* ---------- Couleurs de marque ---------- */
-  --red: #E61D24;        /* CTA, état actif, grands titres d'accent */
+  --red: #E61D24; 
+  --red-2: ##FDEDED; 
+  --red-3: ##FBDADA;  
+  --red-4: ##F9C8C8;      /* CTA, état actif, grands titres d'accent */
   --red-deep: #AD1B1F;   /* hover des CTA, petit texte rouge sur fond clair */
   --teal: #0F878A;       /* icônes, filets, cercle du processus, bordures de chips */
 
@@ -34,6 +37,7 @@
   --teal-light: #7FCFD0; /* petit texte d'accent et focus sur fond --ink */
   --red-light: #F4868A;  /* petit texte rouge sur fond --ink */
   --cream: #F8F5EF;      /* fond clair principal */
+   --cream-2: #fdf5e5; 
   --sand: #ECE5D8;       /* cartes alternatives et placeholders */
   --white: #FFFFFF;
   --text: #14201F;       /* texte principal */
