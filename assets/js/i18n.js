@@ -76,6 +76,10 @@
 
     /* ---------- Introduction ---------- */
     "about.label": "Introduction",
+    "about.eyebrow": "Notre regard",
+    "about.title": "Des récits vrais.",
+    "about.titleAccent": "Des vies réelles.",
+    "about.onLocation": "Sur le terrain / Pinned Media",
     "about.statement": "Pinned Media raconte des histoires vraies, avec de vraies personnes. Ancrés dans le journalisme, nous créons des documentaires cinématographiques non scénarisés, de la photographie et des récits interactifs qui placent au centre les communautés sous-représentées, l’Afrique et sa diaspora.",
     "about.text": "Nous mettons en relation des créatifs locaux en Afrique et dans la diaspora pour accompagner organisations, marques et éditeurs avec des récits forts et une communication efficace. En français comme en anglais, nous apportons une compréhension culturelle, une expérience internationale et une connaissance du terrain à des projets menés sur tout le continent.",
     "about.imgAlt": "Coulisses d’un tournage Pinned Media",
