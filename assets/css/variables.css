@@ -75,6 +75,7 @@
   --header-h: 76px;
 
   /* ---------- Rayons ---------- */
+  --radius-section: 40px;
   --radius-card: 20px;
   --radius-card-sm: 16px;
   --radius-img: 12px;

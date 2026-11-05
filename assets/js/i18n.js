@@ -58,6 +58,8 @@
 
     /* ---------- Navigation ---------- */
     "nav.whatWeDo": "Nos métiers",
+    "nav.services": "Services",
+    "nav.process": "Méthode",
     "nav.work": "Réalisations",
     "nav.training": "Formation",
     "nav.clients": "Clients",
@@ -73,6 +75,7 @@
     "hero.eyebrow": "Films · Photographie · Storytelling interactif",
     "hero.title": "Des récits qui comptent",
     "hero.text": "Une agence internationale de production et de communication qui réalise des films, des photographies et des récits interactifs attentifs aux cultures, de la stratégie jusqu’à la livraison finale.",
+    "hero.intro": "Ancrés dans le journalisme, nous racontons des histoires vraies avec de vraies personnes et créons des communications qui relient les organisations à leurs publics. En français comme en anglais, avec des créatifs locaux en Afrique et dans la diaspora, nous associons compréhension culturelle et expérience de la production internationale.",
 
     /* ---------- Introduction ---------- */
     "about.label": "Introduction",

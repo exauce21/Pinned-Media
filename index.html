@@ -131,28 +131,18 @@
       <div class="container hero__inner">
         <div class="hero__content">
           <h1 class="hero__title" id="hero-title" data-i18n="hero.title">Stories with impact</h1>
-          <p class="hero__text" data-i18n="hero.text">
-            An international production and communications agency 
-            delivering culturally informed films, photography 
-            and interactive storytelling, from strategy to 
-            final delivery.
-          </p>
+          <p class="hero__text" data-i18n="hero.text">An international production and communications agency delivering culturally informed films, photography and interactive storytelling, from strategy to final delivery.</p>
+          <p class="hero__intro" data-i18n="hero.intro">Rooted in journalism, we tell real stories with real people and create communications that connect organisations with their audiences. Working in French and English with local creatives across Africa and the diaspora, we combine cultural insight with international production experience.</p>
           <div class="btn-row">
             <a class="btn btn--primary" href="#contact"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.getInTouch">Get in touch</span></a>
             <a class="btn btn--secondary btn--on-dark" href="#work"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.exploreWork">Explore our work</span></a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-labelledby="hero-card-title">
-          <h2 class="hero-card__title" id="hero-card-title" data-i18n="ui.enquiries">Enquiries</h2>
-          <a class="hero-card__mail link-underline" href="mailto:info@pinned-media.com">info@pinned-media.com</a>
-          <ul class="chip-list" aria-label="Languages" data-i18n-aria-label="ui.languages">
-            <li class="chip chip--glass">English</li>
-            <li class="chip chip--glass" lang="fr">Français</li>
-          </ul>
+        <aside class="hero-card" aria-label="Pinned Media showreel" data-i18n-aria-label="ui.headerVideo">
           <button type="button" class="hero-card__thumb" data-video-dialog="iNHBkITcBS0" data-video-title-key="ui.headerVideo">
-            <img src="https://i.ytimg.com/vi/iNHBkITcBS0/hqdefault.jpg" data-yt-poster="iNHBkITcBS0" data-yt-step="hq" alt="" width="480" height="360" loading="lazy">
-            <span class="play-dot play-dot--sm" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span>
+            <img src="https://i.ytimg.com/vi/iNHBkITcBS0/maxresdefault.jpg" data-yt-poster="iNHBkITcBS0" alt="" width="1280" height="720" fetchpriority="high">
+            <span class="play-dot" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span>
             <span class="hero-card__thumb-label" data-i18n="ui.playVideo">Play video</span>
           </button>
         </aside>
@@ -163,6 +153,33 @@
         <span class="sr-only" data-i18n="ui.pauseVideo">Pause background video</span>
       </button>
     </section>
+
+     <!-- ===== CLIENTS AND PARTNERS (logos défilants) ===== -->
+    <section class="section clients bg-white" id="clients" aria-labelledby="clients-title">
+      <div class="container clients__row">
+        <h2 class="clients__title reveal" id="clients-title" data-i18n="clients.title">Trusted by NGOs, brands, publishers & governments</h2>
+        <div class="marquee">
+          <div class="marquee__track">
+            <ul class="logo-row">
+                <li class="logo-row__item"><img src="assets/img/logos/FIFA.jpg" alt="FIFA" width="290" height="96" loading="lazy"></li>
+                <li class="logo-row__item"><img src="assets/img/logos/USAID.jpg" alt="USAID via Chemonics" width="568" height="96" loading="lazy"></li>
+                <li class="logo-row__item"><img src="assets/img/logos/UNDP AFRICA.jpg" alt="UNDP Africa" width="393" height="96" loading="lazy"></li>
+                <li class="logo-row__item"><img src="assets/img/logos/FCDO.jpg" alt="FCDO" width="272" height="96" loading="lazy"></li>
+                <li class="logo-row__item"><img src="assets/img/logos/UNISS SAHEL.jpg" alt="UN Sahel" width="363" height="96" loading="lazy"></li>
+            </ul>
+            <!-- Copie pour la boucle continue, masquée aux lecteurs d'écran -->
+            <ul class="logo-row" aria-hidden="true">
+                <li class="logo-row__item"><img src="assets/img/logos/FIFA.jpg" alt="" width="290" height="96" loading="lazy"></li>
+                <li class="logo-row__item"><img src="assets/img/logos/USAID.jpg" alt="" width="568" height="96" loading="lazy"></li>
+                <li class="logo-row__item"><img src="assets/img/logos/UNDP AFRICA.jpg" alt="" width="393" height="96" loading="lazy"></li>
+                <li class="logo-row__item"><img src="assets/img/logos/FCDO.jpg" alt="" width="272" height="96" loading="lazy"></li>
+                <li class="logo-row__item"><img src="assets/img/logos/UNISS SAHEL.jpg" alt="" width="363" height="96" loading="lazy"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
     <!-- ===== INTRODUCTION ===== -->
     <section class="section about bg-cream" id="about" aria-label="Introduction" data-i18n-aria-label="about.label">
@@ -279,33 +296,41 @@
     </section>
 
     <!-- ===== WHY PARTNERS CHOOSE PINNED MEDIA ===== -->
-    <section class="section why bg-cream" id="why" aria-labelledby="why-title">
+    <section class="section why bg-white" id="why" aria-labelledby="why-title">
       <div class="container">
         <h2 class="section-title why__title reveal" id="why-title" data-i18n="why.title">Why partners choose Pinned Media</h2>
         <ul class="why__grid">
-          <li class="why-card why-card--red reveal">
-            <svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+          <li class="why-card reveal">
+            <div class="why-card__top">
+              <span class="why-card__badge"><svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
+            </div>
             <div>
               <h3 class="why-card__title" data-i18n="why.local.title">Local knowledge and creative agency</h3>
               <p data-i18n="why.local.text">Local creatives bring cultural knowledge and trusted relationships; contributors have a voice in how their stories are told.</p>
             </div>
           </li>
-          <li class="why-card why-card--photo reveal">
-            <svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          <li class="why-card reveal">
+            <div class="why-card__top">
+              <span class="why-card__badge"><svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+            </div>
             <div>
               <h3 class="why-card__title" data-i18n="why.countries.title">Several countries working together</h3>
               <p data-i18n="why.countries.text">We coordinate teams across countries simultaneously, combining local expertise with central production management.</p>
             </div>
           </li>
-          <li class="why-card why-card--white reveal">
-            <svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg>
+          <li class="why-card reveal">
+            <div class="why-card__top">
+              <span class="why-card__badge"><svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg></span>
+            </div>
             <div>
               <h3 class="why-card__title" data-i18n="why.flexible.title">Flexible production and quick turnaround</h3>
               <p data-i18n="why.flexible.text">Flexible teams, responsive delivery and practical approaches for a wide range of budgets.</p>
             </div>
           </li>
-          <li class="why-card why-card--photo reveal">
-            <svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19v3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><rect x="9" y="2" width="6" height="13" rx="3"/></svg>
+          <li class="why-card reveal">
+            <div class="why-card__top">
+              <span class="why-card__badge"><svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19v3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><rect x="9" y="2" width="6" height="13" rx="3"/></svg></span>
+            </div>
             <div>
               <h3 class="why-card__title" data-i18n="why.real.title">Real people and a journalistic approach</h3>
               <p data-i18n="why.real.text">Journalistic research, careful interviewing and editorial judgement shape our unscripted storytelling.</p>
@@ -314,7 +339,8 @@
         </ul>
       </div>
     </section>
-    
+
+   
     <!-- ===== SELECTED WORK ===== -->
     <section class="section work bg-ink" id="work" aria-labelledby="work-title">
       <div class="container">
@@ -471,11 +497,10 @@
       </div>
     </section>
 
-    <!-- ===== CLIENTS, PARTNERS & PLATFORMS ===== -->
-    <section class="section clients bg-white" id="clients" aria-labelledby="clients-title">
+    <!-- ===== THREE PLATFORMS ===== -->
+    <section class="section brands bg-white" id="platforms" aria-labelledby="brands-title">
       <div class="container">
-        <!-- Les trois plateformes -->
-        <div class="clients__platforms" id="platforms">
+        <div>
           <div class="brands__head">
             <h2 class="brands__title reveal" id="brands-title" data-i18n="brands.title">Production backed by journalism and talent development</h2>
             <p class="brands__text reveal wipe" data-i18n="brands.text">Founded by Benedicte Kalombo, the three platforms have distinct teams and complementary expertise. Their collaboration connects commissioned production with editorial insight and opportunities to develop local talent.</p>
@@ -504,20 +529,6 @@
             </li>
           </ol>
         </div>
-        <header class="section-head">
-          <div class="section-head__title">
-            <h2 class="brands__title reveal" id="clients-title" data-i18n="clients.title">Clients and partners</h2>
-          </div>
-          <p class="brands__text wipe" data-i18n="clients.text">International productions and regional projects for FIFA, USAID via Chemonics, UNDP Africa and UN Sahel.</p>
-        </header>
-        <!-- Logos : placeholders à remplacer par les logos approuvés (SVG ou PNG transparent) -->
-        <ul class="logo-row">
-          <li class="logo-row__item"><img src="assets/img/logos/FIFA.jpg" alt="FIFA" width="240" height="96" loading="lazy"></li>
-          <li class="logo-row__item"><img src="assets/img/logos/USAID.jpg" alt="USAID via Chemonics" width="240" height="96" loading="lazy"></li>
-          <li class="logo-row__item"><img src="assets/img/logos/UNDP AFRICA.jpg" alt="UNDP Africa" width="240" height="96" loading="lazy"></li>
-          <li class="logo-row__item"><img src="assets/img/logos/FCDO.jpg" alt="FCDO" width="240" height="96" loading="lazy"></li>
-          <li class="logo-row__item"><img src="assets/img/logos/UNISS SAHEL.jpg" alt="UN Sahel" width="240" height="96" loading="lazy"></li>
-        </ul>
       </div>
     </section>
 
@@ -572,22 +583,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== TRUSTED BY ===== -->
-    <section class="trusted bg-ink" aria-labelledby="trusted-title" data-trusted>
-      <div class="trusted__sticky">
-        <h2 class="trusted__title" id="trusted-title">
-          <span class="trusted__line1" data-i18n="trusted.line1">Trusted by</span>
-          <span class="trusted__line2" data-i18n="trusted.line2">NGOs, brands, publishers &amp; governments</span>
-        </h2>
-        <ul class="trusted__photos" aria-hidden="true">
-          <li class="trusted__photo" style="--x0:-38vw; --y0:-30vh; --r0:-9deg;"><img src="assets/img/bts/bts-01.jpg" alt="" width="640" height="800" loading="lazy"></li>
-          <li class="trusted__photo" style="--x0:-12vw; --y0:34vh; --r0:7deg;"><img src="assets/img/bts/bts-02.jpg" alt="" width="640" height="800" loading="lazy"></li>
-          <li class="trusted__photo" style="--x0:14vw; --y0:-36vh; --r0:-6deg;"><img src="assets/img/bts/bts-03.jpg" alt="" width="640" height="800" loading="lazy"></li>
-          <li class="trusted__photo" style="--x0:38vw; --y0:28vh; --r0:10deg;"><img src="assets/img/bts/bts-04.jpg" alt="" width="640" height="800" loading="lazy"></li>
-        </ul>
       </div>
     </section>
 
