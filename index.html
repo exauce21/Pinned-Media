@@ -120,8 +120,6 @@
     <!-- ===== HERO ===== -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__media" aria-hidden="true">
-        <!-- Fond : miniature YouTube de la vidéo d'en-tête, en attendant un still approuvé.
-             Pour un still local : remplacez src par assets/img/hero/hero-still.jpg -->
         <img class="hero__bg" src="https://i.ytimg.com/vi/iNHBkITcBS0/maxresdefault.jpg" data-yt-poster="iNHBkITcBS0" data-fallback="assets/img/hero/hero-still.svg" alt="" width="1280" height="720" fetchpriority="high">
         <!-- OPTION boucle vidéo muette : décommentez le bloc ci-dessous et déposez assets/video/hero-loop.mp4.
              Le bouton pause (plus bas, .hero__pause) s'affiche automatiquement.
@@ -133,7 +131,12 @@
       <div class="container hero__inner">
         <div class="hero__content">
           <h1 class="hero__title" id="hero-title" data-i18n="hero.title">Stories with impact</h1>
-          <p class="hero__text" data-i18n="hero.text">An international production and communications agency delivering culturally informed films, photography and interactive storytelling, from strategy to final delivery.</p>
+          <p class="hero__text" data-i18n="hero.text">
+            An international production and communications agency 
+            delivering culturally informed films, photography 
+            and interactive storytelling, from strategy to 
+            final delivery.
+          </p>
           <div class="btn-row">
             <a class="btn btn--primary" href="#contact"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.getInTouch">Get in touch</span></a>
             <a class="btn btn--secondary btn--on-dark" href="#work"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.exploreWork">Explore our work</span></a>
@@ -176,7 +179,6 @@
             <img class="about__image" src="assets/img/about/bts-about.jpg" alt="Behind the scenes on a Pinned Media shoot" data-i18n-alt="about.imgAlt" width="5000" height="3750" loading="lazy">
             <span class="about__image-label" data-i18n="about.onLocation">On location / Pinned Media</span>
           </div>
-          <figcaption class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</figcaption>
         </figure>
       </div>
     </section>
@@ -289,7 +291,6 @@
             </div>
           </li>
           <li class="why-card why-card--photo reveal">
-            <img class="why-card__bg" src="assets/img/services/why-countries.svg" alt="" width="800" height="1000" loading="lazy">
             <svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
             <div>
               <h3 class="why-card__title" data-i18n="why.countries.title">Several countries working together</h3>
@@ -304,7 +305,6 @@
             </div>
           </li>
           <li class="why-card why-card--photo reveal">
-            <img class="why-card__bg" src="assets/img/services/why-real-people.svg" alt="" width="800" height="1000" loading="lazy">
             <svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19v3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><rect x="9" y="2" width="6" height="13" rx="3"/></svg>
             <div>
               <h3 class="why-card__title" data-i18n="why.real.title">Real people and a journalistic approach</h3>
@@ -314,40 +314,7 @@
         </ul>
       </div>
     </section>
-
-    <!-- ===== THREE BRANDS ===== -->
-    <section class="section brands bg-white" id="platforms" aria-labelledby="brands-title">
-      <div class="container">
-        <div class="brands__head">
-          <h3 class="brands__title reveal" id="brands-title" data-i18n="brands.title">Production backed by journalism and talent development</h3>
-          <p class="brands__text reveal" data-i18n="brands.text">Founded by Benedicte Kalombo, the three platforms have distinct teams and complementary expertise. Their collaboration connects commissioned production with editorial insight and opportunities to develop local talent.</p>
-        </div>
-        <ol class="brand-strip">
-          <li class="brand-card brand-card--accent reveal">
-            <span class="brand-card__node" aria-hidden="true"></span>
-            <img class="brand-card__logo" src="assets/img/logos/logo.png" alt="Pinned Media logo (placeholder)" data-i18n-alt="brands.pm.alt" width="160" height="64" loading="lazy">
-            <p class="brand-card__role chip chip--red" data-i18n="brands.pm.role">Production</p>
-            <h4 class="brand-card__name">Pinned Media</h4>
-            <p data-i18n="brands.pm.text">Commissioned production and communications services.</p>
-          </li>
-          <li class="brand-card reveal">
-            <span class="brand-card__node" aria-hidden="true"></span>
-            <img class="brand-card__logo" src="assets/img/logos/logo-pin-africa.svg" alt="Pin Africa logo (placeholder)" data-i18n-alt="brands.pa.alt" width="160" height="64" loading="lazy">
-            <p class="brand-card__role chip chip--teal" data-i18n="brands.pa.role">Journalism</p>
-            <h4 class="brand-card__name">Pin Africa</h4>
-            <p data-i18n="brands.pa.text">Independent journalism, story discovery and publishing.</p>
-          </li>
-          <li class="brand-card reveal">
-            <span class="brand-card__node" aria-hidden="true"></span>
-            <img class="brand-card__logo" src="assets/img/logos/acquire-by-pin-africa.png" alt="Acquire by Pin Africa logo (placeholder)" data-i18n-alt="brands.ac.alt" width="160" height="64" loading="lazy">
-            <p class="brand-card__role chip chip--teal" data-i18n="brands.ac.role">Talent</p>
-            <h4 class="brand-card__name">Acquire by Pin Africa</h4>
-            <p data-i18n="brands.ac.text">Training, mentorship and emerging talent development.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
+    
     <!-- ===== SELECTED WORK ===== -->
     <section class="section work bg-ink" id="work" aria-labelledby="work-title">
       <div class="container">
@@ -504,14 +471,44 @@
       </div>
     </section>
 
-    <!-- ===== CLIENTS AND PARTNERS ===== -->
+    <!-- ===== CLIENTS, PARTNERS & PLATFORMS ===== -->
     <section class="section clients bg-white" id="clients" aria-labelledby="clients-title">
       <div class="container">
+        <!-- Les trois plateformes -->
+        <div class="clients__platforms" id="platforms">
+          <div class="brands__head">
+            <h2 class="brands__title reveal" id="brands-title" data-i18n="brands.title">Production backed by journalism and talent development</h2>
+            <p class="brands__text reveal wipe" data-i18n="brands.text">Founded by Benedicte Kalombo, the three platforms have distinct teams and complementary expertise. Their collaboration connects commissioned production with editorial insight and opportunities to develop local talent.</p>
+          </div>
+          <ol class="brand-strip">
+            <li class="brand-card brand-card--accent reveal">
+              <span class="brand-card__node" aria-hidden="true"></span>
+              <img class="brand-card__logo" src="assets/img/logos/logo.png" alt="Pinned Media logo (placeholder)" data-i18n-alt="brands.pm.alt" width="160" height="64" loading="lazy">
+              <p class="brand-card__role chip chip--red" data-i18n="brands.pm.role">Production</p>
+              <h3 class="brand-card__name">Pinned Media</h3>
+              <p data-i18n="brands.pm.text">Commissioned production and communications services.</p>
+            </li>
+            <li class="brand-card reveal">
+              <span class="brand-card__node" aria-hidden="true"></span>
+              <img class="brand-card__logo" src="assets/img/logos/logo-pin-africa.svg" alt="Pin Africa logo (placeholder)" data-i18n-alt="brands.pa.alt" width="160" height="64" loading="lazy">
+              <p class="brand-card__role chip chip--teal" data-i18n="brands.pa.role">Journalism</p>
+              <h3 class="brand-card__name">Pin Africa</h3>
+              <p data-i18n="brands.pa.text">Independent journalism, story discovery and publishing.</p>
+            </li>
+            <li class="brand-card reveal">
+              <span class="brand-card__node" aria-hidden="true"></span>
+              <img class="brand-card__logo" src="assets/img/logos/acquire-by-pin-africa.png" alt="Acquire by Pin Africa logo (placeholder)" data-i18n-alt="brands.ac.alt" width="160" height="64" loading="lazy">
+              <p class="brand-card__role chip chip--teal" data-i18n="brands.ac.role">Talent</p>
+              <h3 class="brand-card__name">Acquire by Pin Africa</h3>
+              <p data-i18n="brands.ac.text">Training, mentorship and emerging talent development.</p>
+            </li>
+          </ol>
+        </div>
         <header class="section-head">
           <div class="section-head__title">
-            <h2 class="section-title reveal" id="clients-title" data-i18n="clients.title">Clients and partners</h2>
+            <h2 class="brands__title reveal" id="clients-title" data-i18n="clients.title">Clients and partners</h2>
           </div>
-          <p class="lede wipe" data-i18n="clients.text">International productions and regional projects for FIFA, USAID via Chemonics, UNDP Africa and UN Sahel.</p>
+          <p class="brands__text wipe" data-i18n="clients.text">International productions and regional projects for FIFA, USAID via Chemonics, UNDP Africa and UN Sahel.</p>
         </header>
         <!-- Logos : placeholders à remplacer par les logos approuvés (SVG ou PNG transparent) -->
         <ul class="logo-row">
@@ -680,28 +677,29 @@
   <footer class="site-footer bg-ink">
     <div class="container site-footer__grid">
       <div class="site-footer__content">
-        <div class="site-footer__cta-row">
-          <p class="site-footer__tagline" data-i18n="hero.title">Stories with impact</p>
-          <a class="btn btn--primary" href="#contact"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.getInTouch">Get in touch</span></a>
-        </div>
-        <hr class="rule rule--dark">
-        <div class="site-footer__cols">
-          <div class="site-footer__contact">
-            <a class="site-footer__logo" href="#top" aria-label="Pinned Media — back to top">
-              <img src="assets/img/logos/Pinned media logo 2.svg" alt="Pinned Media" width="3490" height="2157" loading="lazy">
-            </a>
+        <div class="site-footer__top">
+          <div class="site-footer__cta-row">
+            <p class="site-footer__tagline" data-i18n="hero.title">Stories with impact</p>
+            <a class="btn btn--primary" href="#contact"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.getInTouch">Get in touch</span></a>
           </div>
-          <nav aria-label="Footer" data-i18n-aria-label="ui.footerNav">
-            <ul class="site-footer__links">
-              <li><a href="#what-we-do" data-i18n="nav.whatWeDo">What we do</a></li>
-              <li><a href="#work" data-i18n="nav.work">Selected work</a></li>
-              <li><a href="#training" data-i18n="nav.training">Training</a></li>
-              <li><a href="#clients" data-i18n="nav.clients">Clients</a></li>
-              <li><a href="#how-we-work" data-i18n="nav.howWeWork">How we work</a></li>
-              <li><a href="#team" data-i18n="nav.team">Team</a></li>
-              <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-            </ul>
-          </nav>
+          <div class="site-footer__cols">
+            <div class="site-footer__contact">
+              <a class="site-footer__logo" href="#top" aria-label="Pinned Media — back to top">
+                <img src="assets/img/logos/Pinned media logo 2.svg" alt="Pinned Media" width="3490" height="2157" loading="lazy">
+              </a>
+            </div>
+            <nav aria-label="Footer" data-i18n-aria-label="ui.footerNav">
+              <ul class="site-footer__links">
+                <li><a href="#what-we-do" data-i18n="nav.whatWeDo">What we do</a></li>
+                <li><a href="#work" data-i18n="nav.work">Selected work</a></li>
+                <li><a href="#training" data-i18n="nav.training">Training</a></li>
+                <li><a href="#clients" data-i18n="nav.clients">Clients</a></li>
+                <li><a href="#how-we-work" data-i18n="nav.howWeWork">How we work</a></li>
+                <li><a href="#team" data-i18n="nav.team">Team</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <div class="site-footer__bottom">
           <p>© <span data-year>2026</span> Pinned Media</p>
