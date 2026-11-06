@@ -1,0 +1,9 @@
+# Fichiers système macOS
+.DS_Store
+
+# Images sources (lourdes) : on ne publie que les copies optimisées des dossiers web/.
+# Les originaux sont conservés hors du projet, dans ../pinned-media-sources/
+assets/img/work/*/*.png
+assets/img/work/*/*.jpg
+assets/img/work/*/*.jpeg
+!assets/img/work/*/web/
