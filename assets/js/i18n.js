@@ -237,7 +237,7 @@
     "wif.result": "Trois courts documentaires originaux qui ont suscité l’intérêt de diffuseurs et démontré notre capacité à trouver des intervenants marquants, à développer un format non scénarisé et à porter à l’écran des histoires de football peu représentées.",
 
     /* ---------- Formation ---------- */
-    "training.title": "Formation et développement des talents",
+    "training.title": "Formation et<br>développement des talents",
     "training.intro": "Nous aidons chacun à transformer son potentiel créatif en compétences concrètes, en œuvres abouties et en nouvelles opportunités.",
     "training.partnersLabel": "Partenaires :",
     "training.platformsLabel": "Plateformes :",

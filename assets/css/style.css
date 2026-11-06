@@ -2677,7 +2677,9 @@ html:not(.is-preview) [data-cleared="false"] {
   --process-radius: clamp(28px, 4vw, 56px);
   position: relative;
   margin-top: calc(-1 * var(--process-radius));
-  padding-block: clamp(64px, 8vw, 112px);
+  padding-top: clamp(64px, 8vw, 112px);
+  /* Training remonte de son arrondi par-dessus : on ajoute ce débord */
+  padding-bottom: calc(clamp(28px, 4vw, 56px) + clamp(64px, 8vw, 112px));
   /* Coins arrondis en haut (pas d'overflow: hidden, pour garder le sticky) */
   border-radius: var(--process-radius) var(--process-radius) 0 0;
 }
@@ -3232,6 +3234,41 @@ html:not(.js) .timeline__dot {
 }
 
 .process__intro { color: rgba(255, 255, 255, 0.85); }
+
+/* ---------- Training : coins arrondis en haut, comme Services et How we work ---------- */
+.training {
+  --training-radius: clamp(28px, 4vw, 56px);
+  position: relative;
+  margin-top: calc(-1 * var(--training-radius));
+  padding-top: clamp(64px, 8vw, 112px);
+  border-radius: var(--training-radius) var(--training-radius) 0 0;
+}
+
+/* Titre sur deux lignes équilibrées */
+.training .section-title {
+  max-width: none; /* coupure fixée par le <br> dans le titre */
+}
+
+/* Desktop : colonne titre plus large, paragraphe plus étroit,
+   pour que chaque ligne du titre tienne sur une seule ligne */
+@media (min-width: 900px) {
+  .training .section-head {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  }
+
+  .training .section-title {
+    white-space: nowrap;
+    /* Légèrement réduit pour que « développement des talents » (FR) tienne aussi */
+    font-size: clamp(2rem, 3.6vw, 3rem);
+  }
+
+  .training .section-head .lede { max-width: 30ch; }
+}
+
+.training .section-head { 
+  padding-bottom: clamp(20px, 2.5vw, 32px);
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
 
 /* ---------- 9d. How we work : cartes blanches + icônes (surcharge de la frise 9b) ---------- */
 .timeline__card {
