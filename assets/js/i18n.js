@@ -198,6 +198,8 @@
     "fifa.trailerTitle": "Bande-annonce d’Africa Stories",
     "fifa.watchAll": "Voir tous les épisodes d’Africa Stories",
     "fifa.stills": "Images des films",
+    "fifa.stillAlt": "Un joueur en maillot rouge et blanc, extrait du film d’Africa Stories sur une équipe de joueurs atteints d’albinisme",
+    "fifa.stillCaption": "Image extraite d’Africa Stories",
 
     /* ---------- Projet : USAID via Chemonics ---------- */
     "chemonics.brief": "Mettre en lumière les histoires humaines derrière les programmes d’agriculture, de sécurité alimentaire et de développement. Chemonics avait besoin de photographies, de vidéos et de récits à hauteur d’humain montrant l’expérience des personnes en matière d’investissement, de moyens de subsistance et de résilience, avec une attention particulière portée aux femmes, aux jeunes et aux communautés sous-représentées.",
