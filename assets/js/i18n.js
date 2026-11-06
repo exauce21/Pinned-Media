@@ -182,6 +182,8 @@
     "country.drc": "République démocratique du Congo",
     "country.mali": "Mali",
     "country.uganda": "Ouganda",
+    "country.drcShort": "RDC",
+    "country.uk": "Royaume-Uni",
 
     /* ---------- Projet : FIFA ---------- */
     "fifa.intro": "Une série de courts documentaires sur la façon dont le football rassemble les personnes, renforce les communautés et reflète les multiples manières dont ce sport est célébré à travers l’Afrique : des terrains de quartier aux rassemblements entre voisins, jusqu’aux moments partagés de fierté, d’appartenance et de changement social.",

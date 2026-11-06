@@ -179,7 +179,6 @@
         </div>
       </div>
     </section>
-    
 
     <!-- ===== INTRODUCTION ===== -->
     <section class="section about_section bg-cream" id="about" aria-label="Introduction" data-i18n-aria-label="about.label">
@@ -197,6 +196,86 @@
             <span class="about__image-label" data-i18n="about.onLocation">On location / Pinned Media</span>
           </div>
         </figure>
+      </div>
+    </section>
+
+     <!-- ===== SELECTED WORK ===== -->
+    <!-- Proposition 4 (active) : « work--panels » (panneaux portrait). Autres variantes :
+         « work--bento » (3), « work--carousel » (2) ou aucune classe (1). -->
+    <section class="section work work--panels bg-teal" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head section-head--dark">
+          <div class="section-head__title">
+            <h2 class="section-title reveal" id="work-title" data-i18n="work.title">Selected work</h2>
+          </div>
+          <p class="reveal" data-i18n="work.intro">Our work spans international productions and regional projects for FIFA, USAID via Chemonics, UNDP Africa and UN Sahel, and digital storytelling.</p>
+        </header>
+        
+        <div class="work__grid" data-work-track>
+          <!-- Projet 1 : FIFA (carte large 21:9). Détail : <template id="project-fifa"> plus bas -->
+          <article class="project-card reveal" data-project="fifa">
+            <div class="project-card__media">
+              <img src="assets/img/work/fifa-cover.jpg" alt="Africa Stories film still (placeholder)" data-i18n-alt="work.fifa.alt" width="1680" height="720" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <ul class="chip-list project-card__client"><li class="chip">FIFA</li></ul>
+              <h3 class="project-card__title">Africa Stories</h3>
+              <p class="project-card__summary" data-i18n="work.fifa.summary">A short documentary series exploring how football unites people and communities across Africa.</p>
+              <ul class="chip-list project-card__countries" aria-label="Countries" data-i18n-aria-label="ui.countries"><li class="chip chip--country" data-i18n="country.kenya">Kenya</li><li class="chip chip--country" data-i18n="country.nigeria">Nigeria</li><li class="chip chip--country" data-i18n="country.morocco">Morocco</li><li class="chip chip--country" data-i18n="country.senegal">Senegal</li></ul>
+              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="fifa" aria-haspopup="dialog">
+                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: Africa Stories</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 2 : USAID via Chemonics. La couverture doit être un visuel validé pour publication -->
+          <article class="project-card reveal" data-project="chemonics">
+            <div class="project-card__media">
+              <img src="assets/img/work/chemonics-cover.jpg" alt="Livelihoods and resilience project (placeholder)" data-i18n-alt="work.chemonics.alt" width="1280" height="800" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <ul class="chip-list project-card__client"><li class="chip">USAID via Chemonics</li></ul>
+              <h3 class="project-card__title" data-i18n="work.chemonics.title">Stories of livelihoods and resilience across four African countries</h3>
+              <p class="project-card__summary" data-i18n="work.chemonics.summary">Films, visual journalism and photography on livelihoods and resilience in Kenya, DRC, Mali and Uganda.</p>
+              <ul class="chip-list project-card__countries" aria-label="Countries" data-i18n-aria-label="ui.countries"><li class="chip chip--country" data-i18n="country.kenya">Kenya</li><li class="chip chip--country" data-i18n="country.drcShort">DRC</li><li class="chip chip--country" data-i18n="country.mali">Mali</li><li class="chip chip--country" data-i18n="country.uganda">Uganda</li></ul>
+              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="chemonics" aria-haspopup="dialog">
+                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: USAID via Chemonics</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 3 : UNDP -->
+          <article class="project-card reveal" data-project="undp">
+            <div class="project-card__media">
+              <img src="assets/img/work/undp-cover.jpg" alt="United Nations digital projects (placeholder)" data-i18n-alt="work.undp.alt" width="1280" height="800" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <ul class="chip-list project-card__client"><li class="chip">UNDP</li></ul>
+              <h3 class="project-card__title" data-i18n="work.undp.title">Making development stories accessible</h3>
+              <p class="project-card__summary" data-i18n="work.undp.summary">Digital projects across UNDP Africa, TICAD and the UN’s Sahel work, combining storytelling, reporting tools and staff training.</p>
+              <ul class="chip-list project-card__countries" aria-label="Countries" data-i18n-aria-label="ui.countries"><li class="chip chip--country" data-i18n="country.senegal">Senegal</li></ul>
+              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="undp" aria-haspopup="dialog">
+                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: UNDP</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Projet 4 : Women in Football -->
+          <article class="project-card reveal" data-project="women-in-football">
+            <div class="project-card__media">
+              <img src="assets/img/work/women-in-football-cover.jpg" alt="Women in Football — Under Her Feet poster (placeholder)" data-i18n-alt="work.wif.alt" width="1280" height="800" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <ul class="chip-list project-card__client"><li class="chip chip--red" data-i18n="ui.originalDev">Original development</li></ul>
+              <h3 class="project-card__title">Women in Football — Under Her Feet</h3>
+              <p class="project-card__summary" data-i18n="work.wif.summary">Three short documentaries on the women and communities shaping grassroots football in the UK.</p>
+              <ul class="chip-list project-card__countries" aria-label="Countries" data-i18n-aria-label="ui.countries"><li class="chip chip--country" data-i18n="country.uk">United Kingdom</li></ul>
+              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="women-in-football" aria-haspopup="dialog">
+                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: Women in Football</span>
+              </button>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -293,19 +372,16 @@
           </li>
         </ol>
       </div>
-    </section>
-
-    <!-- ===== WHY PARTNERS CHOOSE PINNED MEDIA ===== -->
-    <section class="section why bg-white" id="why" aria-labelledby="why-title">
-      <div class="container">
-        <h2 class="section-title why__title reveal" id="why-title" data-i18n="why.title">Why partners choose Pinned Media</h2>
+      <!-- Why partners choose Pinned Media (dans la même section) -->
+      <div class="container why-block" id="why">
+        <h3 class="why__title reveal" id="why-title" data-i18n="why.title">Why partners choose Pinned Media</h3>
         <ul class="why__grid">
           <li class="why-card reveal">
             <div class="why-card__top">
               <span class="why-card__badge"><svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
             </div>
             <div>
-              <h3 class="why-card__title" data-i18n="why.local.title">Local knowledge and creative agency</h3>
+              <h4 class="why-card__title" data-i18n="why.local.title">Local knowledge and creative agency</h4>
               <p data-i18n="why.local.text">Local creatives bring cultural knowledge and trusted relationships; contributors have a voice in how their stories are told.</p>
             </div>
           </li>
@@ -314,7 +390,7 @@
               <span class="why-card__badge"><svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
             </div>
             <div>
-              <h3 class="why-card__title" data-i18n="why.countries.title">Several countries working together</h3>
+              <h4 class="why-card__title" data-i18n="why.countries.title">Several countries working together</h4>
               <p data-i18n="why.countries.text">We coordinate teams across countries simultaneously, combining local expertise with central production management.</p>
             </div>
           </li>
@@ -323,7 +399,7 @@
               <span class="why-card__badge"><svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg></span>
             </div>
             <div>
-              <h3 class="why-card__title" data-i18n="why.flexible.title">Flexible production and quick turnaround</h3>
+              <h4 class="why-card__title" data-i18n="why.flexible.title">Flexible production and quick turnaround</h4>
               <p data-i18n="why.flexible.text">Flexible teams, responsive delivery and practical approaches for a wide range of budgets.</p>
             </div>
           </li>
@@ -332,7 +408,7 @@
               <span class="why-card__badge"><svg class="icon why-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19v3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><rect x="9" y="2" width="6" height="13" rx="3"/></svg></span>
             </div>
             <div>
-              <h3 class="why-card__title" data-i18n="why.real.title">Real people and a journalistic approach</h3>
+              <h4 class="why-card__title" data-i18n="why.real.title">Real people and a journalistic approach</h4>
               <p data-i18n="why.real.text">Journalistic research, careful interviewing and editorial judgement shape our unscripted storytelling.</p>
             </div>
           </li>
@@ -340,77 +416,56 @@
       </div>
     </section>
 
-   
-    <!-- ===== SELECTED WORK ===== -->
-    <section class="section work bg-ink" id="work" aria-labelledby="work-title">
-      <div class="container">
-        <header class="section-head section-head--dark">
-          <div class="section-head__title">
-            <h2 class="section-title reveal" id="work-title" data-i18n="work.title">Selected work</h2>
+    <!-- ===== HOW WE WORK ===== -->
+    <section class="process bg-ink" id="how-we-work" aria-labelledby="process-title" data-process>
+      <div class="process__sticky">
+        <div class="container">
+          <header class="section-head section-head--dark section-head--compact">
+            <div class="section-head__title">
+              <h2 class="section-title" id="process-title" data-i18n="process.title">How we work</h2>
+            </div>
+          </header>
+
+          <div class="process__grid">
+            <div class="process__panels">
+              <div class="process-step" id="step-panel-1">
+                <span class="process-step__num" aria-hidden="true">01</span>
+                <h3 class="process-step__title" data-i18n="process.brief.title">Brief</h3>
+                <p data-i18n="process.brief.text">Engage us for a production project, a communications campaign or a monthly agency partnership. We agree your objectives, audience, budget, scope and approval process, with clear deliverables and measures of success.</p>
+              </div>
+              <div class="process-step" id="step-panel-2">
+                <span class="process-step__num" aria-hidden="true">02</span>
+                <h3 class="process-step__title" data-i18n="process.plan.title">Plan</h3>
+                <p data-i18n="process.plan.text">We research the story, listen to contributors and develop the editorial and visual approach. We connect the right local creatives, coordinate locations and plan a shared schedule for productions across one or several countries.</p>
+              </div>
+              <div class="process-step" id="step-panel-3">
+                <span class="process-step__num" aria-hidden="true">03</span>
+                <h3 class="process-step__title" data-i18n="process.produce.title">Produce</h3>
+                <p data-i18n="process.produce.text">Local filmmakers and creatives bring their knowledge, relationships and perspective to the production. We coordinate teams across countries simultaneously, capturing real people and unfolding stories with cultural nuance and care.</p>
+              </div>
+              <div class="process-step" id="step-panel-4">
+                <span class="process-step__num" aria-hidden="true">04</span>
+                <h3 class="process-step__title" data-i18n="process.deliver.title">Deliver</h3>
+                <p data-i18n="process.deliver.text">We deliver content and manage publishing across agreed channels. For monthly agency partnerships, we review performance and refine the communications plan with you.</p>
+              </div>
+            </div>
+
+            <div class="process__wheel">
+              <svg class="process__circle" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+                <circle cx="200" cy="200" r="170" fill="none" stroke="currentColor" stroke-width="1"/>
+                <circle class="process__arc" cx="200" cy="200" r="170" fill="none" stroke-width="2" pathLength="100"/>
+              </svg>
+              <div class="process__center" aria-hidden="true">
+                <img class="icon" src="assets/img/logos/Pinned%20media.svg" alt="">
+              </div>
+              <div class="process__tabs" role="tablist" aria-label="How we work" data-i18n-aria-label="process.title">
+                <button type="button" class="process-node process-node--n" id="step-tab-1" role="tab" aria-controls="step-panel-1" aria-selected="true"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.brief.title">Brief</span></button>
+                <button type="button" class="process-node process-node--e" id="step-tab-2" role="tab" aria-controls="step-panel-2" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.plan.title">Plan</span></button>
+                <button type="button" class="process-node process-node--s" id="step-tab-3" role="tab" aria-controls="step-panel-3" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.produce.title">Produce</span></button>
+                <button type="button" class="process-node process-node--w" id="step-tab-4" role="tab" aria-controls="step-panel-4" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.deliver.title">Deliver</span></button>
+              </div>
+            </div>
           </div>
-          <p class="lede wipe" data-i18n="work.intro">Our work spans international productions and regional projects for FIFA, USAID via Chemonics, UNDP Africa and UN Sahel, and digital storytelling.</p>
-        </header>
-
-        <div class="work__grid">
-          <!-- Projet 1 : FIFA (carte large 21:9). Détail : <template id="project-fifa"> plus bas -->
-          <article class="project-card reveal" data-project="fifa">
-            <div class="project-card__media">
-              <img src="assets/img/work/fifa-cover.jpg" alt="Africa Stories film still (placeholder)" data-i18n-alt="work.fifa.alt" width="1680" height="720" loading="lazy">
-            </div>
-            <div class="project-card__body">
-              <ul class="chip-list"><li class="chip">FIFA</li></ul>
-              <h3 class="project-card__title">Africa Stories</h3>
-              <p class="project-card__summary" data-i18n="work.fifa.summary">A short documentary series exploring how football unites people and communities across Africa.</p>
-              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="fifa" aria-haspopup="dialog">
-                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: Africa Stories</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Projet 2 : USAID via Chemonics. La couverture doit être un visuel validé pour publication -->
-          <article class="project-card reveal" data-project="chemonics">
-            <div class="project-card__media">
-              <img src="assets/img/work/chemonics-cover.jpg" alt="Livelihoods and resilience project (placeholder)" data-i18n-alt="work.chemonics.alt" width="1280" height="800" loading="lazy">
-            </div>
-            <div class="project-card__body">
-              <ul class="chip-list"><li class="chip">USAID via Chemonics</li></ul>
-              <h3 class="project-card__title" data-i18n="work.chemonics.title">Stories of livelihoods and resilience across four African countries</h3>
-              <p class="project-card__summary" data-i18n="work.chemonics.summary">Films, visual journalism and photography on livelihoods and resilience in Kenya, DRC, Mali and Uganda.</p>
-              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="chemonics" aria-haspopup="dialog">
-                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: USAID via Chemonics</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Projet 3 : UNDP -->
-          <article class="project-card reveal" data-project="undp">
-            <div class="project-card__media">
-              <img src="assets/img/work/undp-cover.jpg" alt="United Nations digital projects (placeholder)" data-i18n-alt="work.undp.alt" width="1280" height="800" loading="lazy">
-            </div>
-            <div class="project-card__body">
-              <ul class="chip-list"><li class="chip">UNDP</li></ul>
-              <h3 class="project-card__title" data-i18n="work.undp.title">Making development stories accessible</h3>
-              <p class="project-card__summary" data-i18n="work.undp.summary">Digital projects across UNDP Africa, TICAD and the UN’s Sahel work, combining storytelling, reporting tools and staff training.</p>
-              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="undp" aria-haspopup="dialog">
-                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: UNDP</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- Projet 4 : Women in Football -->
-          <article class="project-card reveal" data-project="women-in-football">
-            <div class="project-card__media">
-              <img src="assets/img/work/women-in-football-cover.jpg" alt="Women in Football — Under Her Feet poster (placeholder)" data-i18n-alt="work.wif.alt" width="1280" height="800" loading="lazy">
-            </div>
-            <div class="project-card__body">
-              <ul class="chip-list"><li class="chip chip--red" data-i18n="ui.originalDev">Original development</li></ul>
-              <h3 class="project-card__title">Women in Football — Under Her Feet</h3>
-              <p class="project-card__summary" data-i18n="work.wif.summary">Three short documentaries on the women and communities shaping grassroots football in the UK.</p>
-              <button type="button" class="btn btn--ghost project-card__btn" data-open-project="women-in-football" aria-haspopup="dialog">
-                <span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.viewProject">View project</span><span class="sr-only">: Women in Football</span>
-              </button>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -528,60 +583,6 @@
               <p data-i18n="brands.ac.text">Training, mentorship and emerging talent development.</p>
             </li>
           </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== HOW WE WORK ===== -->
-    <section class="process bg-ink" id="how-we-work" aria-labelledby="process-title" data-process>
-      <div class="process__sticky">
-        <div class="container">
-          <header class="section-head section-head--dark section-head--compact">
-            <div class="section-head__title">
-              <h2 class="section-title" id="process-title" data-i18n="process.title">How we work</h2>
-            </div>
-          </header>
-
-          <div class="process__grid">
-            <div class="process__panels">
-              <div class="process-step" id="step-panel-1">
-                <span class="process-step__num" aria-hidden="true">01</span>
-                <h3 class="process-step__title" data-i18n="process.brief.title">Brief</h3>
-                <p data-i18n="process.brief.text">Engage us for a production project, a communications campaign or a monthly agency partnership. We agree your objectives, audience, budget, scope and approval process, with clear deliverables and measures of success.</p>
-              </div>
-              <div class="process-step" id="step-panel-2">
-                <span class="process-step__num" aria-hidden="true">02</span>
-                <h3 class="process-step__title" data-i18n="process.plan.title">Plan</h3>
-                <p data-i18n="process.plan.text">We research the story, listen to contributors and develop the editorial and visual approach. We connect the right local creatives, coordinate locations and plan a shared schedule for productions across one or several countries.</p>
-              </div>
-              <div class="process-step" id="step-panel-3">
-                <span class="process-step__num" aria-hidden="true">03</span>
-                <h3 class="process-step__title" data-i18n="process.produce.title">Produce</h3>
-                <p data-i18n="process.produce.text">Local filmmakers and creatives bring their knowledge, relationships and perspective to the production. We coordinate teams across countries simultaneously, capturing real people and unfolding stories with cultural nuance and care.</p>
-              </div>
-              <div class="process-step" id="step-panel-4">
-                <span class="process-step__num" aria-hidden="true">04</span>
-                <h3 class="process-step__title" data-i18n="process.deliver.title">Deliver</h3>
-                <p data-i18n="process.deliver.text">We deliver content and manage publishing across agreed channels. For monthly agency partnerships, we review performance and refine the communications plan with you.</p>
-              </div>
-            </div>
-
-            <div class="process__wheel">
-              <svg class="process__circle" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
-                <circle cx="200" cy="200" r="170" fill="none" stroke="currentColor" stroke-width="1"/>
-                <circle class="process__arc" cx="200" cy="200" r="170" fill="none" stroke-width="2" pathLength="100"/>
-              </svg>
-              <div class="process__center" aria-hidden="true">
-                <img class="icon" src="assets/img/logos/Pinned%20media.svg" alt="">
-              </div>
-              <div class="process__tabs" role="tablist" aria-label="How we work" data-i18n-aria-label="process.title">
-                <button type="button" class="process-node process-node--n" id="step-tab-1" role="tab" aria-controls="step-panel-1" aria-selected="true"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.brief.title">Brief</span></button>
-                <button type="button" class="process-node process-node--e" id="step-tab-2" role="tab" aria-controls="step-panel-2" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.plan.title">Plan</span></button>
-                <button type="button" class="process-node process-node--s" id="step-tab-3" role="tab" aria-controls="step-panel-3" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.produce.title">Produce</span></button>
-                <button type="button" class="process-node process-node--w" id="step-tab-4" role="tab" aria-controls="step-panel-4" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.deliver.title">Deliver</span></button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

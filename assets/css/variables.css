@@ -71,11 +71,11 @@
   /* ---------- Mise en page ---------- */
   --container: 1200px;
   --gutter: 24px;
-  --section-pad: clamp(80px, 10vw, 140px);
+  --section-pad: clamp(20px, 14vw, 140px);
   --header-h: 76px;
 
   /* ---------- Rayons ---------- */
-  --radius-section: 40px;
+  --radius-section: 50px;
   --radius-card: 20px;
   --radius-card-sm: 16px;
   --radius-img: 12px;
