@@ -4306,6 +4306,83 @@ dialog::backdrop {
   border-radius: var(--radius-img);
 }
 
+.story-card__text {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.story-grid .story-card img {
+  aspect-ratio: 1280 / 646;
+  object-fit: cover;
+}
+
+/* Visuel large dans le détail d'un projet */
+.pd-feature img {
+  width: 100%;
+  border-radius: var(--radius-img);
+}
+
+.pd-feature figcaption { margin-top: 8px; }
+
+/* Galerie en 16:9 (images de film) */
+.gallery--wide img { aspect-ratio: 16 / 9; object-fit: cover; }
+
+@media (min-width: 640px) {
+  .gallery--wide { grid-template-columns: repeat(3, 1fr); }
+}
+
+.gallery-credit {
+  margin: -4px 0 12px;
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+
+/* Captures de sites : on montre le haut de la page */
+.site-grid .story-card img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Emplacements pour ajouter des captures (aperçu uniquement : ?preview) */
+.drop-grid {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .drop-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.drop-box {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  aspect-ratio: 16 / 10;
+  padding: 16px;
+  border: 2px dashed var(--line-light);
+  border-radius: var(--radius-img);
+  background: var(--cream);
+  color: var(--muted);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-align: center;
+}
+
+.drop-box__icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--teal-deep);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
 .pd-credits {
   padding-top: 24px;
   border-top: 1px solid var(--line-light);

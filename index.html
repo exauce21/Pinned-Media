@@ -99,11 +99,11 @@
       </div>
       <nav aria-label="Main" data-i18n-aria-label="ui.mainNav">
         <ol class="menu-list">
-          <li><a href="#what-we-do"><span data-i18n="nav.whatWeDo">What we do</span></a></li>
-          <li><a href="#work"><span data-i18n="nav.work">Selected work</span></a></li>
-          <li><a href="#training"><span data-i18n="nav.training">Training</span></a></li>
           <li><a href="#clients"><span data-i18n="nav.clients">Clients</span></a></li>
+          <li><a href="#work"><span data-i18n="nav.work">Our work</span></a></li>
+          <li><a href="#what-we-do"><span data-i18n="nav.whatWeDo">What we do</span></a></li>
           <li><a href="#how-we-work"><span data-i18n="nav.howWeWork">How we work</span></a></li>
+          <li><a href="#training"><span data-i18n="nav.training">Training</span></a></li>
           <li><a href="#team"><span data-i18n="nav.team">Team</span></a></li>
           <li><a href="#contact"><span data-i18n="nav.contact">Contact</span></a></li>
         </ol>
@@ -802,6 +802,16 @@
         </div>
         <a class="btn btn--primary" href="https://www.dazn.com/en-GB/competition/Competition:dvud28koovba4f0nsr6n8lj5j" target="_blank" rel="noopener"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="fifa.watchAll">Watch all Africa Stories</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
       </div>
+      <div class="media-group">
+        <h3 class="pd-sub" data-i18n="fifa.stills">Film stills</h3>
+        <!-- Emplacements libres : remplacez un <li class="drop-box"> par une image.
+             Visibles uniquement en aperçu (ajoutez ?preview à l’URL). -->
+        <ul class="drop-grid">
+          <li class="drop-box" data-cleared="false"><span class="drop-box__icon" aria-hidden="true">+</span><span data-i18n="ui.addStill">Add an approved film still</span></li>
+          <li class="drop-box" data-cleared="false"><span class="drop-box__icon" aria-hidden="true">+</span><span data-i18n="ui.addStill">Add an approved film still</span></li>
+          <li class="drop-box" data-cleared="false"><span class="drop-box__icon" aria-hidden="true">+</span><span data-i18n="ui.addStill">Add an approved film still</span></li>
+        </ul>
+      </div>
     </div>
     <section class="pd-credits" aria-labelledby="credits-fifa">
       <h3 class="pd-sub" id="credits-fifa" data-i18n="ui.credits">Credits</h3>
@@ -809,15 +819,14 @@
       <dl class="credits">
         <div><dt data-i18n="credit.client">Client</dt><dd>FIFA</dd></div>
         <div><dt data-i18n="credit.production">Production</dt><dd>Pinned Media</dd></div>
-        <div><dt data-i18n="credit.crew">Crew</dt><dd data-i18n="ui.creditsTbc">[Individual credits to be confirmed]</dd></div>
       </dl>
     </section>
   </template>
 
   <!-- ===== PROJET : USAID VIA CHEMONICS =====
-       CONFIDENTIALITÉ : chaque média porte data-cleared="false".
-       Masqué par défaut, visible seulement avec ?preview dans l'URL.
-       Pour publier un média : data-cleared="true". -->
+       Médias publiés : data-cleared="true".
+       Pour masquer un média en attente de validation : data-cleared="false"
+       (il n'est alors visible qu'avec ?preview dans l'URL). -->
   <template id="project-chemonics">
     <header class="pd-head">
       <ul class="chip-list"><li class="chip">USAID via Chemonics</li></ul>
@@ -851,7 +860,7 @@
       <div class="media-group">
         <h4 class="pd-sub" data-i18n="chemonics.kenyaFilmTitle">Watch the Kenya film</h4>
         <p data-i18n="chemonics.kenyaFilmText">A film bringing community voices and lived experiences to the screen.</p>
-        <div class="video-facade media-item" data-video-id="8gSHJpLcfMo" data-cleared="false">
+        <div class="video-facade media-item" data-video-id="8gSHJpLcfMo" data-cleared="true">
           <img class="video-facade__poster" src="https://i.ytimg.com/vi/8gSHJpLcfMo/maxresdefault.jpg" data-yt-poster="8gSHJpLcfMo" alt="" width="1280" height="720" loading="lazy">
           <button type="button" class="video-facade__play">
             <span class="play-dot" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></span>
@@ -864,17 +873,19 @@
         <h4 class="pd-sub" data-i18n="chemonics.vjTitle">Explore the visual journalism</h4>
         <p data-i18n="chemonics.vjText">Discover stories from Kenya and the Democratic Republic of Congo, combining original reporting, photography, film, animation and graphics.</p>
         <div class="story-grid">
-          <article class="story-card media-item" data-cleared="false">
-            <img src="assets/img/work/chemonics-kenya-story.svg" alt="Kenya visual journalism story preview (placeholder)" data-i18n-alt="chemonics.kenyaStoryAlt" width="1280" height="800" loading="lazy">
+          <article class="story-card media-item" data-cleared="true">
+            <img src="assets/img/work/USAID/web/kenya-story.jpg" alt="Kenya story: From Lake to Hive, empowering Turkana communities for sustainable growth" data-i18n-alt="chemonics.kenyaStoryAlt" width="1280" height="646" loading="lazy">
             <div class="story-card__body">
               <h5 class="story-card__title" data-i18n="country.kenya">Kenya</h5>
+              <p class="story-card__text" data-i18n="chemonics.kenyaStoryTitle">From Lake to Hive: Empowering Turkana Communities for Sustainable Growth</p>
               <a class="btn btn--secondary" href="https://a-pin-africa.vev.site/kenya-fishing" target="_blank" rel="noopener"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.exploreStory">Explore the story</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
             </div>
           </article>
-          <article class="story-card media-item" data-cleared="false">
-            <img src="assets/img/work/chemonics-drc-story.svg" alt="Democratic Republic of Congo visual journalism story preview (placeholder)" data-i18n-alt="chemonics.drcStoryAlt" width="1280" height="800" loading="lazy">
+          <article class="story-card media-item" data-cleared="true">
+            <img src="assets/img/work/USAID/web/drc-story.jpg" alt="DRC story: Energy, Agriculture and Hope in Eastern DRC" data-i18n-alt="chemonics.drcStoryAlt" width="1280" height="646" loading="lazy">
             <div class="story-card__body">
               <h5 class="story-card__title" data-i18n="country.drc">Democratic Republic of Congo</h5>
+              <p class="story-card__text" data-i18n="chemonics.drcStoryTitle">Energy, Agriculture and Hope in Eastern DRC</p>
               <a class="btn btn--secondary" href="https://a-pin-africa.vev.site/demo" target="_blank" rel="noopener"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="ui.exploreStory">Explore the story</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
             </div>
           </article>
@@ -886,21 +897,18 @@
         <p data-i18n="chemonics.photoText">A selection of our original photographs from Mali and Uganda.</p>
 
         <h5 class="gallery-label" data-i18n="country.mali">Mali</h5>
+        <p class="gallery-credit">Photography © Ousmane Traore</p>
         <!-- Galerie Mali : remplacez chaque src, alt, légende et crédit -->
         <ul class="gallery" data-gallery="mali">
-          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-mali-01.svg" alt="Mali photograph 1 (placeholder)" data-i18n-alt="gallery.mali1" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
-          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-mali-02.svg" alt="Mali photograph 2 (placeholder)" data-i18n-alt="gallery.mali2" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
-          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-mali-03.svg" alt="Mali photograph 3 (placeholder)" data-i18n-alt="gallery.mali3" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
-          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-mali-04.svg" alt="Mali photograph 4 (placeholder)" data-i18n-alt="gallery.mali4" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
+          <li class="media-item" data-cleared="true"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/USAID/web/mali-01.jpg" alt="A woman watering rows of lettuce in Mali" data-i18n-alt="gallery.mali1" width="1600" height="1066" loading="lazy"></button><figcaption><span class="credit">Photography © Ousmane Traore</span></figcaption></figure></li>
+          <li class="media-item" data-cleared="true"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/USAID/web/mali-02.jpg" alt="A farmer tending crops in a field in Mali" data-i18n-alt="gallery.mali2" width="1600" height="1066" loading="lazy"></button><figcaption><span class="credit">Photography © Ousmane Traore</span></figcaption></figure></li>
         </ul>
 
         <h5 class="gallery-label" data-i18n="country.uganda">Uganda</h5>
+        <p class="gallery-credit">Photography © Stuart Tibaweswa</p>
         <!-- Galerie Ouganda -->
         <ul class="gallery" data-gallery="uganda">
-          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-uganda-01.svg" alt="Uganda photograph 1 (placeholder)" data-i18n-alt="gallery.uganda1" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
-          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-uganda-02.svg" alt="Uganda photograph 2 (placeholder)" data-i18n-alt="gallery.uganda2" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
-          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-uganda-03.svg" alt="Uganda photograph 3 (placeholder)" data-i18n-alt="gallery.uganda3" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
-          <li class="media-item" data-cleared="false"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/chemonics-uganda-04.svg" alt="Uganda photograph 4 (placeholder)" data-i18n-alt="gallery.uganda4" width="1200" height="800" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="ui.captionTbc">[Caption to be supplied]</span> <span class="credit" data-i18n="ui.creditTbc">Photo: credit to be confirmed</span></figcaption></figure></li>
+          <li class="media-item" data-cleared="true"><figure><button type="button" class="gallery__btn"><img src="assets/img/work/USAID/web/uganda-01.jpg" alt="A woman carrying a red basin on her head among crops in Uganda" data-i18n-alt="gallery.uganda1" width="1600" height="1066" loading="lazy"></button><figcaption><span class="credit">Photography © Stuart Tibaweswa</span></figcaption></figure></li>
         </ul>
       </div>
     </div>
@@ -909,7 +917,6 @@
       <dl class="credits">
         <div><dt data-i18n="credit.client">Client</dt><dd>USAID via Chemonics</dd></div>
         <div><dt data-i18n="credit.production">Production</dt><dd>Pinned Media</dd></div>
-        <div><dt data-i18n="credit.crew">Crew</dt><dd data-i18n="ui.creditsTbc">[Individual credits to be confirmed]</dd></div>
       </dl>
     </section>
   </template>
@@ -944,7 +951,7 @@
         <h3 class="pd-sub" data-i18n="ui.sampleOfWork">Sample of work</h3>
         <div class="site-grid">
           <article class="story-card">
-            <img src="assets/img/work/undp-africa-innovators.svg" alt="UNDP Africa innovators website preview (placeholder)" data-i18n-alt="undp.alt1" width="1280" height="800" loading="lazy">
+            <img src="assets/img/work/UNDP/web/undp-africa-innovates.jpg" alt="UNDP Africa African Influencers for Development website homepage" data-i18n-alt="undp.alt1" width="1280" height="800" loading="lazy">
             <div class="story-card__body">
               <h4 class="story-card__title" data-i18n="undp.site1">UNDP Africa innovators</h4>
               <!-- TODO: URL -->
@@ -952,7 +959,7 @@
             </div>
           </article>
           <article class="story-card">
-            <img src="assets/img/work/ticad-reporting-tool.svg" alt="TICAD reporting tool preview (placeholder)" data-i18n-alt="undp.alt2" width="1280" height="800" loading="lazy">
+            <img src="assets/img/work/UNDP/web/ticad-monitor.jpg" alt="TICAD Monitor reporting tool homepage" data-i18n-alt="undp.alt2" width="1280" height="800" loading="lazy">
             <div class="story-card__body">
               <h4 class="story-card__title" data-i18n="undp.site2">TICAD reporting tool</h4>
               <!-- TODO: URL -->
@@ -960,7 +967,7 @@
             </div>
           </article>
           <article class="story-card">
-            <img src="assets/img/work/un-sahel.svg" alt="UN Sahel website preview (placeholder)" data-i18n-alt="undp.alt3" width="1280" height="800" loading="lazy">
+            <img src="assets/img/work/UNDP/web/un-sahel-site.jpg" alt="UN Integrated Strategy for the Sahel website homepage" data-i18n-alt="undp.alt3" width="1280" height="800" loading="lazy">
             <div class="story-card__body">
               <h4 class="story-card__title">UN Sahel</h4>
               <!-- TODO: URL -->
@@ -969,13 +976,29 @@
           </article>
         </div>
       </div>
+      <div class="media-group">
+        <h3 class="pd-sub" data-i18n="undp.magazineTitle">The innovators magazine</h3>
+        <figure class="poster">
+          <img src="assets/img/work/UNDP/web/africa-innovates-magazine.jpg" alt="Cover of the Africa Innovates magazine" data-i18n-alt="undp.magazineAlt" width="800" height="1093" loading="lazy">
+          <figcaption class="credit" data-i18n="undp.magazineCaption">Launched during the UN General Assembly, 2020</figcaption>
+        </figure>
+      </div>
+      <div class="media-group">
+        <h3 class="pd-sub" data-i18n="ui.moreCaptures">More screenshots</h3>
+        <!-- Emplacements libres : remplacez un <li class="drop-box"> par une image.
+             Visibles uniquement en aperçu (ajoutez ?preview à l’URL). -->
+        <ul class="drop-grid">
+          <li class="drop-box" data-cleared="false"><span class="drop-box__icon" aria-hidden="true">+</span><span data-i18n="ui.addCapture">Add a screenshot</span></li>
+          <li class="drop-box" data-cleared="false"><span class="drop-box__icon" aria-hidden="true">+</span><span data-i18n="ui.addCapture">Add a screenshot</span></li>
+          <li class="drop-box" data-cleared="false"><span class="drop-box__icon" aria-hidden="true">+</span><span data-i18n="ui.addCapture">Add a screenshot</span></li>
+        </ul>
+      </div>
     </div>
     <section class="pd-credits" aria-labelledby="credits-undp">
       <h3 class="pd-sub" id="credits-undp" data-i18n="ui.credits">Credits</h3>
       <dl class="credits">
         <div><dt data-i18n="credit.client">Client</dt><dd>UNDP</dd></div>
         <div><dt data-i18n="credit.production">Production</dt><dd>Pinned Media</dd></div>
-        <div><dt data-i18n="credit.crew">Crew</dt><dd data-i18n="ui.creditsTbc">[Individual credits to be confirmed]</dd></div>
       </dl>
     </section>
   </template>
@@ -1004,10 +1027,37 @@
     <div class="pd-media">
       <div class="media-group">
         <h3 class="pd-sub" data-i18n="ui.sampleOfWork">Sample of work</h3>
-        <figure class="poster">
-          <img src="assets/img/work/women-in-football-poster.jpg" alt="Women in Football — Under Her Feet poster (placeholder)" data-i18n-alt="work.wif.alt" width="800" height="1200" loading="lazy">
+        <figure class="pd-feature">
+          <img src="assets/img/work/UK/web/wif-key-art.jpg" alt="Women in Football — Under Her Feet key art" data-i18n-alt="wif.keyArtAlt" width="1800" height="1011" loading="lazy">
           <figcaption class="credit">© Pinned Media</figcaption>
         </figure>
+      </div>
+      <div class="media-group">
+        <h3 class="pd-sub" data-i18n="wif.stillsTitle">Stills from the films</h3>
+        <ul class="gallery gallery--wide" data-gallery="wif">
+          <li><figure><button type="button" class="gallery__btn"><img src="assets/img/work/UK/web/wif-still-01.jpg" alt="Still 1 from Under Her Feet" data-i18n-alt="wif.stillAlt1" width="1600" height="900" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="wif.stillCaption">Still from Under Her Feet</span> <span class="credit">© Pinned Media</span></figcaption></figure></li>
+          <li><figure><button type="button" class="gallery__btn"><img src="assets/img/work/UK/web/wif-still-02.jpg" alt="Still 2 from Under Her Feet" data-i18n-alt="wif.stillAlt2" width="1600" height="900" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="wif.stillCaption">Still from Under Her Feet</span> <span class="credit">© Pinned Media</span></figcaption></figure></li>
+          <li><figure><button type="button" class="gallery__btn"><img src="assets/img/work/UK/web/wif-still-03.jpg" alt="Still 3 from Under Her Feet" data-i18n-alt="wif.stillAlt3" width="1600" height="900" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="wif.stillCaption">Still from Under Her Feet</span> <span class="credit">© Pinned Media</span></figcaption></figure></li>
+          <li><figure><button type="button" class="gallery__btn"><img src="assets/img/work/UK/web/wif-still-04.jpg" alt="Still 4 from Under Her Feet" data-i18n-alt="wif.stillAlt4" width="1600" height="900" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="wif.stillCaption">Still from Under Her Feet</span> <span class="credit">© Pinned Media</span></figcaption></figure></li>
+          <li><figure><button type="button" class="gallery__btn"><img src="assets/img/work/UK/web/wif-still-05.jpg" alt="Still 5 from Under Her Feet" data-i18n-alt="wif.stillAlt5" width="1600" height="900" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="wif.stillCaption">Still from Under Her Feet</span> <span class="credit">© Pinned Media</span></figcaption></figure></li>
+          <li><figure><button type="button" class="gallery__btn"><img src="assets/img/work/UK/web/wif-still-06.jpg" alt="Still 6 from Under Her Feet" data-i18n-alt="wif.stillAlt6" width="1600" height="900" loading="lazy"></button><figcaption><span class="gallery__caption" data-i18n="wif.stillCaption">Still from Under Her Feet</span> <span class="credit">© Pinned Media</span></figcaption></figure></li>
+        </ul>
+      </div>
+      <div class="media-group">
+        <figure class="pd-feature">
+          <img src="assets/img/work/UK/web/wif-collage.jpg" alt="Collage of contributors from Under Her Feet" data-i18n-alt="wif.collageAlt" width="1800" height="947" loading="lazy">
+          <figcaption class="credit">© Pinned Media</figcaption>
+        </figure>
+      </div>
+      <div class="media-group">
+        <h3 class="pd-sub" data-i18n="ui.moreCaptures">More screenshots</h3>
+        <!-- Emplacements libres : remplacez un <li class="drop-box"> par une image.
+             Visibles uniquement en aperçu (ajoutez ?preview à l’URL). -->
+        <ul class="drop-grid">
+          <li class="drop-box" data-cleared="false"><span class="drop-box__icon" aria-hidden="true">+</span><span data-i18n="ui.addCapture">Add a screenshot</span></li>
+          <li class="drop-box" data-cleared="false"><span class="drop-box__icon" aria-hidden="true">+</span><span data-i18n="ui.addCapture">Add a screenshot</span></li>
+          <li class="drop-box" data-cleared="false"><span class="drop-box__icon" aria-hidden="true">+</span><span data-i18n="ui.addCapture">Add a screenshot</span></li>
+        </ul>
       </div>
     </div>
     <section class="pd-credits" aria-labelledby="credits-wif">
@@ -1015,7 +1065,6 @@
       <dl class="credits">
         <div><dt data-i18n="credit.type">Project type</dt><dd data-i18n="wif.type">Pinned Media original development project</dd></div>
         <div><dt data-i18n="credit.production">Production</dt><dd>Pinned Media</dd></div>
-        <div><dt data-i18n="credit.crew">Crew</dt><dd data-i18n="ui.creditsTbc">[Individual credits to be confirmed]</dd></div>
       </dl>
     </section>
   </template>
