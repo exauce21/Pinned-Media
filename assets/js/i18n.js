@@ -27,6 +27,7 @@
     "ui.mainNav": "Navigation principale",
     "ui.footerNav": "Navigation de pied de page",
     "ui.enquiries": "Nous écrire",
+    "ui.backToTop": "Retour en haut",
     "ui.playVideo": "Lire la vidéo",
     "ui.pauseVideo": "Mettre en pause la vidéo d’arrière-plan",
     "ui.playBgVideo": "Relancer la vidéo d’arrière-plan",

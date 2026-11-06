@@ -472,7 +472,7 @@
       <div class="container">
         <header class="section-head section-head--compact">
           <div class="section-head__title">
-            <h2 class="section-title reveal" id="training-title" data-i18n="training.title">Training and<br>talent development</h2>
+            <h2 class="section-title reveal" id="training-title" data-i18n="training.title">Training and talent development</h2>
           </div>
           <p class="reveal" data-i18n="training.intro">We help people turn creative potential into practical skills, finished work and new opportunities.</p>
         </header>
@@ -643,53 +643,48 @@
         </ul>
       </div>
     </section>
-
-    <!-- ===== CONTACT ===== -->
-    <section class="section contact bg-white" id="contact" aria-labelledby="contact-title">
-      <div class="container contact__grid">
-        <div class="contact__main">
-          <h2 class="section-title reveal" id="contact-title" data-i18n="contact.title">Let’s tell your story</h2>
-          <p class="contact__intro reveal" data-i18n="contact.intro">Looking for a production and communications agency? Tell us your goals, audience and budget. We deliver projects, campaigns and monthly agency services in French and English.</p>
-          <a class="contact__mail" href="mailto:info@pinned-media.com">info@pinned-media.com</a>
-          <!-- TODO: URL du portfolio. Renseignez href puis retirez l'attribut hidden. -->
-          <a class="btn btn--secondary contact__portfolio" href="#" target="_blank" rel="noopener" hidden><span class="btn__dot" aria-hidden="true"></span><span data-i18n="contact.portfolio">Explore Benedicte’s portfolio</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer bg-ink">
-    <div class="container site-footer__grid">
-      <div class="site-footer__content">
-        <div class="site-footer__top">
-          <div class="site-footer__cta-row">
-            <p class="site-footer__tagline" data-i18n="hero.title">Stories with impact</p>
-            <a class="btn btn--primary" href="#contact"><span class="btn__dot" aria-hidden="true"></span><span data-i18n="cta.getInTouch">Get in touch</span></a>
-          </div>
-          <div class="site-footer__cols">
-            <div class="site-footer__contact">
-              <a class="site-footer__logo" href="#top" aria-label="Pinned Media — back to top">
-                <img src="assets/img/logos/Pinned media logo 2.svg" alt="Pinned Media" width="3490" height="2157" loading="lazy">
-              </a>
-            </div>
-            <nav aria-label="Footer" data-i18n-aria-label="ui.footerNav">
-              <ul class="site-footer__links">
-                <li><a href="#what-we-do" data-i18n="nav.whatWeDo">What we do</a></li>
-                <li><a href="#work" data-i18n="nav.work">Selected work</a></li>
-                <li><a href="#training" data-i18n="nav.training">Training</a></li>
-                <li><a href="#clients" data-i18n="nav.clients">Clients</a></li>
-                <li><a href="#how-we-work" data-i18n="nav.howWeWork">How we work</a></li>
-                <li><a href="#team" data-i18n="nav.team">Team</a></li>
-                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
+  <!-- ===== CONTACT + FOOTER (fusionnés) ===== -->
+  <footer class="footer-x bg-ink" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="footer-x__cta">
+        <h2 class="footer-x__title reveal" id="contact-title" data-i18n="contact.title">Let’s tell your story</h2>
+        <div class="footer-x__cta-grid">
+          <p class="footer-x__intro reveal" data-i18n="contact.intro">Looking for a production and communications agency? Tell us your goals, audience and budget. We deliver projects, campaigns and monthly agency services in French and English.</p>
+          <a class="footer-x__mail reveal" href="mailto:info@pinned-media.com">
+            <span class="footer-x__mail-text">info@pinned-media.com</span>
+            <span class="footer-x__mail-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></span>
+          </a>
         </div>
-        <div class="site-footer__bottom">
-          <p>© <span data-year>2026</span> Pinned Media</p>
-        </div>
+          <!-- TODO: URL du portfolio. Renseignez href puis retirez l'attribut hidden. -->
+          <a class="btn btn--secondary contact__portfolio" href="#" target="_blank" rel="noopener" hidden><span class="btn__dot" aria-hidden="true"></span><span data-i18n="contact.portfolio">Explore Benedicte’s portfolio</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
+      </div>
+
+      <div class="footer-x__mid">
+        <a class="footer-x__logo" href="#top" aria-label="Pinned Media — back to top">
+          <img src="assets/img/logos/Pinned media logo 2.svg" alt="Pinned Media" width="3490" height="2157" loading="lazy">
+        </a>
+        <nav class="footer-x__nav" aria-label="Footer" data-i18n-aria-label="ui.footerNav">
+          <ul class="footer-x__links">
+            <li><a href="#clients" data-i18n="nav.clients">Clients</a></li>
+            <li><a href="#work" data-i18n="nav.work">Our work</a></li>
+            <li><a href="#what-we-do" data-i18n="nav.whatWeDo">What we do</a></li>
+            <li><a href="#how-we-work" data-i18n="nav.howWeWork">How we work</a></li>
+            <li><a href="#training" data-i18n="nav.training">Training</a></li>
+            <li><a href="#team" data-i18n="nav.team">Team</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="footer-x__top" href="#top">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>
+          <span class="sr-only" data-i18n="ui.backToTop">Back to top</span>
+        </a>
+      </div>
+
+      <div class="footer-x__bottom">
+        <p>© <span data-year>2026</span> Pinned Media</p>
+        <p data-i18n="hero.title">Stories with impact</p>
       </div>
     </div>
   </footer>

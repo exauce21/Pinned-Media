@@ -3270,6 +3270,22 @@ html:not(.js) .timeline__dot {
   margin-bottom: clamp(24px, 3vw, 40px);
 }
 
+/* ---------- Platforms + Team : mêmes coins arrondis en haut ---------- */
+.brands,
+.team {
+  --section-radius: clamp(28px, 4vw, 56px);
+  position: relative;
+  margin-top: calc(-1 * var(--section-radius));
+  border-radius: var(--section-radius) var(--section-radius) 0 0;
+}
+
+/* Sections recouvertes par l'arrondi de la suivante : on rajoute ce débord en bas */
+.training,
+.brands,
+.team {
+  padding-bottom: calc(clamp(28px, 4vw, 56px) + var(--section-pad));
+}
+
 /* ---------- 9d. How we work : cartes blanches + icônes (surcharge de la frise 9b) ---------- */
 .timeline__card {
   display: flex;
@@ -3609,6 +3625,261 @@ html:not(.js) .timeline__dot {
   font-size: var(--fs-small);
   color: var(--muted);
   margin-bottom: 4px;
+}
+
+/* ---------- 13b. Contact + footer fusionnés ---------- */
+.footer-x {
+  --footer-radius: clamp(28px, 4vw, 56px);
+  position: relative;
+  margin-top: calc(-1 * var(--footer-radius));
+  padding-top: clamp(48px, 6vw, 88px);
+  overflow: hidden;
+  border-radius: var(--footer-radius) var(--footer-radius) 0 0;
+  scroll-margin-top: var(--header-h);
+}
+
+/* Halo de couleur discret en haut à droite */
+.footer-x::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: min(60vw, 720px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(15, 135, 138, 0.35), transparent 65%);
+  pointer-events: none;
+}
+
+.footer-x > .container { position: relative; }
+
+/* --- Appel à l'action --- */
+.footer-x__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.06);
+  font-family: var(--font-display);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-x__pulse {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.footer-x__pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--red);
+  animation: play-pulse 2s var(--ease-out) infinite;
+}
+
+.footer-x__title {
+  max-width: 11ch;
+  margin-bottom: clamp(20px, 2.5vw, 32px);
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 9vw, 7.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.footer-x__cta-grid {
+  display: grid;
+  gap: 20px;
+  align-items: end;
+}
+
+@media (min-width: 900px) {
+  .footer-x__cta-grid { grid-template-columns: minmax(0, 1fr) auto; gap: 48px; }
+}
+
+.footer-x__intro {
+  /* Toute la largeur à gauche de la pastille : 2 lignes sur desktop */
+  max-width: 100ch;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Lien e-mail dans une pastille, avec flèche ronde */
+.footer-x__mail {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  justify-self: start;
+  padding: 6px 6px 6px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--white);
+  text-decoration: none;
+  transition: background-color var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
+}
+
+@media (min-width: 900px) {
+  .footer-x__mail { justify-self: end; }
+}
+
+.footer-x__mail-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  word-break: break-all;
+}
+
+.footer-x__mail-arrow {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  transition: transform 500ms var(--ease-out), background-color var(--dur) var(--ease-out);
+}
+
+.footer-x__mail-arrow .icon { width: 18px; height: 18px; }
+
+.footer-x__mail:hover,
+.footer-x__mail:focus-visible {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.footer-x__mail:hover .footer-x__mail-arrow,
+.footer-x__mail:focus-visible .footer-x__mail-arrow {
+  transform: rotate(45deg);
+  background: var(--red-deep);
+}
+
+.footer-x .contact__portfolio { margin-top: 16px; }
+
+/* --- Bande navigation --- */
+.footer-x__mid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px 40px;
+  margin-top: clamp(36px, 4.5vw, 56px);
+  padding-block: 16px;
+  border-top: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.footer-x__logo {
+  display: inline-flex;
+  opacity: 0.9;
+  transition: opacity var(--dur) var(--ease-out);
+}
+
+.footer-x__logo:hover { opacity: 1; }
+
+.footer-x__logo img {
+  width: auto;
+  height: clamp(44px, 5vw, 60px);
+}
+
+.footer-x__nav { flex: 1; }
+
+.footer-x__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 28px;
+}
+
+.footer-x__links a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease-out);
+}
+
+.footer-x__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.footer-x__links a:hover { color: var(--white); }
+.footer-x__links a:hover::after { transform: scaleX(1); }
+
+.footer-x__top {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: var(--white);
+  transition: background-color var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
+}
+
+.footer-x__top:hover {
+  background: var(--red);
+  border-color: var(--red);
+  transform: translateY(-3px);
+}
+
+/* --- Bas de page --- */
+.footer-x__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-block: 16px calc(20px + env(safe-area-inset-bottom, 0px));
+  font-size: var(--fs-small);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- Grand nom en contour, coupé par le bas --- */
+.footer-x__wordmark {
+  margin: 0 0 -0.18em;
+  padding-inline: 2vw;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 15.5vw, 15rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.16);
+  user-select: none;
+  pointer-events: none;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-x__pulse::after { animation: none; }
 }
 
 /* ---------- 13. Footer ---------- */
