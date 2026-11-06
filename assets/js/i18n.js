@@ -259,6 +259,7 @@
 
     /* ---------- Méthode ---------- */
     "process.title": "Notre méthode",
+    "process.intro": "Du premier brief à la livraison finale, une équipe coordonnée accompagne votre projet en quatre étapes claires, dans un ou plusieurs pays.",
     "process.brief.title": "Brief",
     "process.brief.text": "Faites appel à nous pour un projet de production, une campagne de communication ou un partenariat d’agence mensuel. Nous définissons ensemble vos objectifs, votre public, votre budget, le périmètre et le circuit de validation, avec des livrables clairs et des indicateurs de réussite.",
     "process.plan.title": "Préparation",

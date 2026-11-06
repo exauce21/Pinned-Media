@@ -416,57 +416,54 @@
       </div>
     </section>
 
-    <!-- ===== HOW WE WORK ===== -->
-    <section class="process bg-ink" id="how-we-work" aria-labelledby="process-title" data-process>
-      <div class="process__sticky">
-        <div class="container">
-          <header class="section-head section-head--dark section-head--compact">
-            <div class="section-head__title">
-              <h2 class="section-title" id="process-title" data-i18n="process.title">How we work</h2>
-            </div>
-          </header>
-
-          <div class="process__grid">
-            <div class="process__panels">
-              <div class="process-step" id="step-panel-1">
-                <span class="process-step__num" aria-hidden="true">01</span>
-                <h3 class="process-step__title" data-i18n="process.brief.title">Brief</h3>
-                <p data-i18n="process.brief.text">Engage us for a production project, a communications campaign or a monthly agency partnership. We agree your objectives, audience, budget, scope and approval process, with clear deliverables and measures of success.</p>
-              </div>
-              <div class="process-step" id="step-panel-2">
-                <span class="process-step__num" aria-hidden="true">02</span>
-                <h3 class="process-step__title" data-i18n="process.plan.title">Plan</h3>
-                <p data-i18n="process.plan.text">We research the story, listen to contributors and develop the editorial and visual approach. We connect the right local creatives, coordinate locations and plan a shared schedule for productions across one or several countries.</p>
-              </div>
-              <div class="process-step" id="step-panel-3">
-                <span class="process-step__num" aria-hidden="true">03</span>
-                <h3 class="process-step__title" data-i18n="process.produce.title">Produce</h3>
-                <p data-i18n="process.produce.text">Local filmmakers and creatives bring their knowledge, relationships and perspective to the production. We coordinate teams across countries simultaneously, capturing real people and unfolding stories with cultural nuance and care.</p>
-              </div>
-              <div class="process-step" id="step-panel-4">
-                <span class="process-step__num" aria-hidden="true">04</span>
-                <h3 class="process-step__title" data-i18n="process.deliver.title">Deliver</h3>
-                <p data-i18n="process.deliver.text">We deliver content and manage publishing across agreed channels. For monthly agency partnerships, we review performance and refine the communications plan with you.</p>
-              </div>
-            </div>
-
-            <div class="process__wheel">
-              <svg class="process__circle" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
-                <circle cx="200" cy="200" r="170" fill="none" stroke="currentColor" stroke-width="1"/>
-                <circle class="process__arc" cx="200" cy="200" r="170" fill="none" stroke-width="2" pathLength="100"/>
-              </svg>
-              <div class="process__center" aria-hidden="true">
-                <img class="icon" src="assets/img/logos/Pinned%20media.svg" alt="">
-              </div>
-              <div class="process__tabs" role="tablist" aria-label="How we work" data-i18n-aria-label="process.title">
-                <button type="button" class="process-node process-node--n" id="step-tab-1" role="tab" aria-controls="step-panel-1" aria-selected="true"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.brief.title">Brief</span></button>
-                <button type="button" class="process-node process-node--e" id="step-tab-2" role="tab" aria-controls="step-panel-2" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.plan.title">Plan</span></button>
-                <button type="button" class="process-node process-node--s" id="step-tab-3" role="tab" aria-controls="step-panel-3" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.produce.title">Produce</span></button>
-                <button type="button" class="process-node process-node--w" id="step-tab-4" role="tab" aria-controls="step-panel-4" aria-selected="false" tabindex="-1"><span class="process-node__dot" aria-hidden="true"></span><span class="process-node__label" data-i18n="process.deliver.title">Deliver</span></button>
-              </div>
-            </div>
+    <!-- ===== HOW WE WORK : frise compacte, les 4 étapes visibles ensemble ===== -->
+    <section class="process bg-teal" id="how-we-work" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section-head section-head--dark section-head--compact">
+          <div class="section-head__title">
+            <h2 class="section-title reveal" id="process-title" data-i18n="process.title">How we work</h2>
           </div>
-        </div>
+          <p class="reveal" data-i18n="process.intro">From first brief to final delivery, one coordinated team guides your project through four clear steps, in one country or several.</p>
+        </header>
+
+        <ol class="timeline reveal">
+          <li class="timeline__step reveal">
+            <div class="timeline__card">
+              <div class="timeline__top">
+                <span class="timeline__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg></span>
+              </div>
+              <h3 class="timeline__title" data-i18n="process.brief.title">Brief</h3>
+              <p data-i18n="process.brief.text">Engage us for a production project, a communications campaign or a monthly agency partnership. We agree your objectives, audience, budget, scope and approval process, with clear deliverables and measures of success.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal">
+            <div class="timeline__card">
+              <div class="timeline__top">
+                <span class="timeline__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg></span>
+              </div>
+              <h3 class="timeline__title" data-i18n="process.plan.title">Plan</h3>
+              <p data-i18n="process.plan.text">We research the story, listen to contributors and develop the editorial and visual approach. We connect the right local creatives, coordinate locations and plan a shared schedule for productions across one or several countries.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal">
+            <div class="timeline__card">
+              <div class="timeline__top">
+                <span class="timeline__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></span>
+              </div>
+              <h3 class="timeline__title" data-i18n="process.produce.title">Produce</h3>
+              <p data-i18n="process.produce.text">Local filmmakers and creatives bring their knowledge, relationships and perspective to the production. We coordinate teams across countries simultaneously, capturing real people and unfolding stories with cultural nuance and care.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal">
+            <div class="timeline__card">
+              <div class="timeline__top">
+                <span class="timeline__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg></span>
+              </div>
+              <h3 class="timeline__title" data-i18n="process.deliver.title">Deliver</h3>
+              <p data-i18n="process.deliver.text">We deliver content and manage publishing across agreed channels. For monthly agency partnerships, we review performance and refine the communications plan with you.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -657,13 +654,6 @@
           <!-- TODO: URL du portfolio. Renseignez href puis retirez l'attribut hidden. -->
           <a class="btn btn--secondary contact__portfolio" href="#" target="_blank" rel="noopener" hidden><span class="btn__dot" aria-hidden="true"></span><span data-i18n="contact.portfolio">Explore Benedicte’s portfolio</span><span class="sr-only" data-i18n="ui.newTab">(opens in a new tab)</span></a>
         </div>
-        <aside class="contact-card" aria-label="Benedicte Kalombo">
-          <img class="contact-card__photo" src="assets/img/team/benedicte-kalombo.jpg" alt="Portrait of Benedicte Kalombo (placeholder)" data-i18n-alt="team.bk.alt" width="800" height="1000" loading="lazy">
-          <div class="contact-card__body">
-            <p class="contact-card__name">Benedicte Kalombo</p>
-            <p class="contact-card__role" data-i18n="team.bk.role">Founder and Executive Producer</p>
-          </div>
-        </aside>
       </div>
     </section>
 

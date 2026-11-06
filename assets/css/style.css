@@ -1078,7 +1078,10 @@ html:not(.is-preview) [data-cleared="false"] {
   --services-radius: clamp(28px, 4vw, 56px);
   position: relative;
   /* Section précédée par « Selected work » (fond teal) : marge haute rétablie */
-  padding-block: clamp(64px, 8vw, 112px);
+  padding-top: clamp(64px, 8vw, 112px);
+  /* Bas : « How we work » remonte de la hauteur de son arrondi par-dessus
+     cette section, on ajoute donc ce débord à la respiration voulue */
+  padding-bottom: calc(clamp(28px, 4vw, 56px) + clamp(72px, 9vw, 128px));
   /* Coins arrondis en haut, posés sur la section précédente
      (pas d'overflow: hidden, pour garder les cartes collantes) */
   margin-top: calc(-1 * var(--services-radius));
@@ -1292,7 +1295,7 @@ html:not(.is-preview) [data-cleared="false"] {
 }
 
 .why__title {
-  max-width: 24ch;
+  max-width: none;
   margin-inline: auto;
   text-align: center;
   margin-bottom: clamp(24px, 3vw, 40px);
@@ -2863,6 +2866,445 @@ html:not(.is-preview) [data-cleared="false"] {
 .process-node--w { transform: translate(calc(-100% + 10px), -50%); }
 .process-node--n .process-node__label { position: absolute; left: 34px; top: -18px; }
 .process-node--s .process-node__label { position: absolute; left: 34px; top: 18px; }
+
+/* ---------- 9b. How we work : frise compacte ----------
+   Les 4 étapes sont visibles ensemble. La ligne se dessine et les points
+   s'allument l'un après l'autre quand la frise entre à l'écran. */
+.timeline {
+  --line-x: 9px;            /* position de la ligne (mobile : verticale à gauche) */
+  position: relative;
+  display: grid;
+  gap: 16px;
+  padding-left: 40px;
+}
+
+/* Ligne de fond + ligne rouge qui se dessine */
+.timeline::before,
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: var(--line-x);
+  width: 2px;
+  border-radius: 2px;
+  background: var(--line-dark);
+}
+
+.timeline::after {
+  background: var(--red);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1600ms var(--ease-out) 200ms;
+}
+
+.timeline.is-in::after,
+html:not(.js) .timeline::after { transform: none; }
+
+.timeline__step {
+  position: relative;
+}
+
+/* Point de chaque étape, sur la ligne */
+.timeline__dot {
+  position: absolute;
+  top: 28px;
+  left: calc(var(--line-x) - 40px - 9px + 1px);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--line-dark);
+  background: var(--ink);
+  transition: background-color 400ms var(--ease-out), border-color 400ms var(--ease-out), box-shadow 400ms var(--ease-out);
+}
+
+.timeline.is-in .timeline__dot,
+html:not(.js) .timeline__dot {
+  border-color: var(--red);
+  background: var(--red);
+  box-shadow: 0 0 0 6px rgba(230, 29, 36, 0.18);
+}
+
+/* Les points s'allument au passage de la ligne */
+.timeline__step:nth-child(1) .timeline__dot { transition-delay: 300ms; }
+.timeline__step:nth-child(2) .timeline__dot { transition-delay: 700ms; }
+.timeline__step:nth-child(3) .timeline__dot { transition-delay: 1100ms; }
+.timeline__step:nth-child(4) .timeline__dot { transition-delay: 1500ms; }
+
+.timeline__card {
+  height: 100%;
+  padding: 24px;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-card);
+  background: var(--ink-2);
+  transition: border-color var(--dur) var(--ease-out), background-color var(--dur) var(--ease-out);
+}
+
+.timeline__step:hover .timeline__card {
+  border-color: rgba(230, 29, 36, 0.6);
+  background: #0d4547;
+}
+
+.timeline__num {
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  height: 28px;
+  margin-bottom: 18px;
+  padding-inline: 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--teal-light);
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.timeline__title {
+  margin-bottom: 10px;
+  font-size: clamp(1.375rem, 2vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.timeline__card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Desktop : frise horizontale, 4 colonnes, ligne au-dessus des cartes */
+@media (min-width: 900px) {
+  .timeline {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    padding-left: 0;
+    padding-top: 48px;
+  }
+
+  .timeline::before,
+  .timeline::after {
+    top: 8px;
+    bottom: auto;
+    left: 9px;
+    right: 9px;
+    width: auto;
+    height: 2px;
+  }
+
+  .timeline::after {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  .timeline__dot {
+    top: -48px;
+    left: 0;
+  }
+}
+
+/* La frise elle-même ne glisse pas : seules les étapes apparaissent */
+.js .timeline.reveal { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline::after { transform: none; transition: none; }
+  .timeline__dot { transition: none; }
+}
+
+/* ---------- 9c. How we work : étapes interactives (accordéon + lecture auto) ---------- */
+.steps-x {
+  --step-duration: 6s;
+  display: grid;
+  gap: 12px;
+}
+
+.steps-x__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-card);
+  background: var(--ink-2);
+  transition: background-color 500ms var(--ease-out), border-color 500ms var(--ease-out), flex-grow 700ms var(--ease-out);
+}
+
+.steps-x__item.is-active {
+  border-color: transparent;
+  background: var(--teal-deep);
+}
+
+/* Combine l'apparition au scroll (.reveal) et l'élargissement */
+.js .steps-x__item.reveal {
+  transition:
+    opacity var(--dur-slow) var(--ease-out) var(--delay, 0ms),
+    transform var(--dur-slow) var(--ease-out) var(--delay, 0ms),
+    background-color 500ms var(--ease-out),
+    border-color 500ms var(--ease-out),
+    flex-grow 700ms var(--ease-out);
+}
+
+.steps-x__heading { margin: 0; }
+
+.steps-x__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 72px;
+  padding: 20px 24px;
+  border: 0;
+  background: none;
+  color: var(--white);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.steps-x__head:focus-visible {
+  outline: 2px solid var(--teal-light);
+  outline-offset: -4px;
+  border-radius: var(--radius-card);
+}
+
+.steps-x__num {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  min-width: 44px;
+  height: 28px;
+  padding-inline: 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--teal-light);
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: background-color 400ms var(--ease-out), color 400ms var(--ease-out);
+}
+
+.steps-x__item.is-active .steps-x__num {
+  background: var(--red);
+  color: var(--white);
+}
+
+.steps-x__title {
+  flex: 1;
+  font-family: var(--font-display);
+  font-size: clamp(1.375rem, 2vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* Chevron (mobile) */
+.steps-x__chev {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: transform 400ms var(--ease-out);
+}
+
+.steps-x__item.is-active .steps-x__chev { transform: rotate(-135deg); }
+
+/* Contenu repliable (technique grid 0fr → 1fr) */
+.steps-x__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 600ms var(--ease-out);
+}
+
+.steps-x__item.is-active .steps-x__body { grid-template-rows: 1fr; }
+
+.steps-x__inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.steps-x__inner p {
+  max-width: 56ch;
+  padding: 0 24px 28px;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out);
+}
+
+.steps-x__item.is-active .steps-x__inner p {
+  opacity: 1;
+  transform: none;
+  transition-delay: 250ms;
+}
+
+/* Barre de progression (lecture automatique) */
+.steps-x__progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.steps-x__bar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.steps-x.is-playing .steps-x__item.is-active .steps-x__progress { opacity: 1; }
+
+.steps-x.is-playing .steps-x__item.is-active .steps-x__bar {
+  animation: step-progress var(--step-duration) linear forwards;
+}
+
+.steps-x.is-playing:hover .steps-x__bar,
+.steps-x.is-playing:focus-within .steps-x__bar,
+.steps-x.is-paused .steps-x__bar {
+  animation-play-state: paused;
+}
+
+@keyframes step-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Desktop : rangée horizontale, la carte active s'élargit */
+@media (min-width: 900px) {
+  .steps-x {
+    display: flex;
+    gap: 16px;
+    height: clamp(360px, 48vh, 440px);
+  }
+
+  .steps-x__item {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .steps-x__item.is-active { flex-grow: 2.8; }
+
+  .steps-x__heading { flex: 1; display: flex; }
+
+  .steps-x__head {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 28px;
+  }
+
+  .steps-x__item.is-active .steps-x__heading { flex: none; }
+
+  .steps-x__item.is-active .steps-x__head {
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  .steps-x__item.is-active .steps-x__title {
+    flex: none;
+    font-size: clamp(2rem, 3.2vw, 3rem);
+  }
+
+  .steps-x__chev { display: none; }
+
+  .steps-x__inner p { padding: 0 28px 32px; }
+
+  .steps-x__item:not(.is-active):hover {
+    border-color: rgba(230, 29, 36, 0.6);
+    background: #0d4547;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .steps-x__item,
+  .steps-x__body,
+  .steps-x__inner p { transition: none; }
+}
+
+.process__intro { color: rgba(255, 255, 255, 0.85); }
+
+/* ---------- 9d. How we work : cartes blanches + icônes (surcharge de la frise 9b) ---------- */
+.timeline__card {
+  display: flex;
+  flex-direction: column;
+  border-color: transparent;
+  background: var(--white);
+  color: var(--text);
+  box-shadow: 0 24px 48px -28px rgba(0, 0, 0, 0.5);
+  transition: border-color var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
+}
+
+/* Pas de contour au survol : la carte se soulève légèrement */
+.timeline__step:hover .timeline__card {
+  border-color: transparent;
+  background: var(--white);
+  box-shadow: 0 32px 56px -28px rgba(0, 0, 0, 0.55);
+}
+
+/* Sans ligne ni points : simple grille de cartes */
+.timeline,
+.timeline.reveal {
+  padding: 0;
+}
+
+.timeline::before,
+.timeline::after { display: none; }
+
+@media (min-width: 640px) and (max-width: 899px) {
+  .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 900px) {
+  .timeline { padding-top: 0; }
+}
+
+.timeline__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.timeline__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--cream);
+  color: var(--teal-deep);
+  transition: background-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
+}
+
+.timeline__icon .icon {
+  width: 26px;
+  height: 26px;
+}
+
+.timeline__step:hover .timeline__icon {
+  background: var(--red);
+  color: var(--white);
+}
+
+.timeline__num {
+  margin-bottom: 0;
+  background: var(--red-tint);
+  color: var(--red-deep);
+}
+
+.timeline__title { color: var(--ink); }
+
+.timeline__card p { color: var(--muted); }
 
 /* ---------- 10. Trusted by ---------- */
 .trusted {

@@ -272,4 +272,76 @@
 
     updateCarousel();
   }
+
+  /* ------------------------------------------------------------------------
+     How we work : étapes interactives
+     - clic / Entrée sur une étape : l'ouvre (et arrête la lecture automatique)
+     - desktop + mouvement autorisé : lecture auto quand la section est visible,
+       en pause au survol / focus (CSS), passage à l'étape suivante en fin de barre
+     ------------------------------------------------------------------------ */
+  var stepsList = $("[data-steps]");
+  if (stepsList) {
+    var stepItems = $$(".steps-x__item", stepsList);
+    var desktopSteps = window.matchMedia("(min-width: 900px)");
+    var userTookOver = false;
+    var current = 0;
+
+    var openStep = function (index) {
+      current = (index + stepItems.length) % stepItems.length;
+      stepItems.forEach(function (item, i) {
+        var on = i === current;
+        item.classList.toggle("is-active", on);
+        var head = $(".steps-x__head", item);
+        if (head) head.setAttribute("aria-expanded", String(on));
+        /* Relance l'animation de la barre */
+        var bar = $(".steps-x__bar", item);
+        if (bar && on) {
+          bar.style.animation = "none";
+          void bar.offsetWidth;
+          bar.style.animation = "";
+        }
+      });
+    };
+
+    var canAutoplay = function () {
+      return !userTookOver && desktopSteps.matches && !reducedMotion.matches;
+    };
+
+    stepItems.forEach(function (item, i) {
+      var head = $(".steps-x__head", item);
+      if (head) {
+        head.addEventListener("click", function () {
+          userTookOver = true;
+          stepsList.classList.remove("is-playing");
+          /* Mobile : un 2e clic referme l'étape ouverte */
+          if (!desktopSteps.matches && item.classList.contains("is-active")) {
+            item.classList.remove("is-active");
+            head.setAttribute("aria-expanded", "false");
+            return;
+          }
+          openStep(i);
+        });
+      }
+      var bar = $(".steps-x__bar", item);
+      if (bar) {
+        bar.addEventListener("animationend", function () {
+          if (canAutoplay() && item.classList.contains("is-active")) openStep(i + 1);
+        });
+      }
+    });
+
+    /* Lecture uniquement quand la frise est à l'écran */
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          stepsList.classList.toggle("is-playing", entry.isIntersecting && canAutoplay());
+          stepsList.classList.toggle("is-paused", !entry.isIntersecting);
+        });
+      }, { threshold: 0.4 }).observe(stepsList);
+    }
+
+    desktopSteps.addEventListener("change", function () {
+      if (!canAutoplay()) stepsList.classList.remove("is-playing");
+    });
+  }
 })();
